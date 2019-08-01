@@ -18,10 +18,15 @@ const App = () => (
     <div>
         <Modal />
         <header>
-            <Link to='/' className='header-link'>
-                <h3>artsy!!</h3>
-            </Link>
-            <GreetingContainer/>
+            <div className="navbar-wrapper">
+                <div>
+                    <Link to='/' className='artsy-logo'>
+                        <h1>Artsy</h1>
+                        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet"></link>
+                    </Link>
+                </div>
+                <GreetingContainer/>
+            </div>
         </header>
 
         

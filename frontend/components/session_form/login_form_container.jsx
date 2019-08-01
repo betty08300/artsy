@@ -9,18 +9,20 @@ import SessionForm from './session_form';
 const msp = ({ errors }) => {
     return {
         errors: errors.session,
-        formType: 'login',
+        formType: 'Sign in',
     };
 };
 
 const mdp = dispatch => {
     return {
         handleForm: (user) => dispatch(login(user)),
-        otherForm: (
-            <button onClick={()=> dispatch(openModal('signup'))}>
-                Register
-            </button>
-        ),
+        // otherForm: (
+        //     <button onClick={()=> dispatch(openModal('signup'))}>
+        //         <h2>Sign in to continue</h2>
+                
+        //     </button>
+        // ),
+        titleText: "Sign in to continue",
         closeModal: () => dispatch(closeModal())
     };
 };

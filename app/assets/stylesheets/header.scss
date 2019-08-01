@@ -1,0 +1,23 @@
+.navbar-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.artsy-logo h1{
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 100px;
+    letter-spacing: 2px; 
+    font-size: 35px; 
+    color: rgb(112, 141, 238);
+    flex-direction: column;
+}
+
+.login-signup{
+    justify-content: space-between;
+    display: flex; 
+    width: 300px; 
+    background-color: white;
+    align-items: center;
+}
+
