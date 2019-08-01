@@ -23,7 +23,8 @@ const mdp = dispatch => {
         //     </button>
         // ),
         titleText: "Sign in to continue",
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal()),
+        loginDemoUser: (demo) => dispatch(login(demo))
     };
 };
 

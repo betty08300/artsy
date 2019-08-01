@@ -1,4 +1,15 @@
-$button-height: 40px;
+$button-height: 48px;
+
+.title{
+    font-weight: 500;
+    font-size: 26px;
+
+}
+
+.sub-title{
+    font-size: 14px;
+    font-weight: 300;  
+}
 
 .login-form-box{
     display: flex;
@@ -17,6 +28,9 @@ $button-height: 40px;
 
     label {
         padding-top: 10px;
+        font-size: 14px;
+        font-weight: 500; 
+        
     }
 }
 
@@ -26,8 +40,12 @@ $button-height: 40px;
     border-radius: 4px;
     width: 300px;
     margin-bottom: 10px;
+    margin-top: 10px;
     height: $button-height;
+    padding: 16px; 
+
 }
+
 
 .login-form-box input:hover {
     border: 1px solid black;
@@ -80,8 +98,8 @@ $button-height: 40px;
 	margin-left:auto;
 	margin-right:auto;
     width:40%;
-    color: lightgrey;
-
+    color: #595959;
+    font-size: 14px; 
 }
 
 .left {

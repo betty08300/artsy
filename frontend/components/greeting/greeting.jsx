@@ -7,8 +7,12 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         if (currentUser) {
             return (
                 <nav className='login-signup'>
-                    <div className='login-signup-btn'>
-                        <button className="header-button" onClick={logout}>Log Out</button>
+                    <div className='login-signup-link-container'>
+                        <img className='profile-img' src='https://randomuser.me/api/portraits/lego/1.jpg'/>
+                        
+                    </div>
+                    <div>
+                        <button className="login-signup-btn" onClick={logout}>Log Out</button>
                     </div>
                 </nav>
 

@@ -12,6 +12,7 @@ class SessionForm extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleClick = this.handleClick.bind(this);
+    
     }
 
     update(field) {
@@ -34,10 +35,12 @@ class SessionForm extends React.Component {
             email: 'betty2019@gmail.com',
             password: 'betty2019'
         }
-        this.props.handleForm(demo).then(()=>{
+        this.props.loginDemoUser(demo).then(()=>{
             this.props.closeModal()
         });
     }
+
+
 
     renderErrors() {
         return (
@@ -57,11 +60,11 @@ class SessionForm extends React.Component {
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     {/* <div onClick={this.props.closeModal} className='close-x'>X</div> */}
-                    <h3>{this.props.titleText}</h3>
-                    <h6>{this.props.subTitle}</h6>
+                    <h3 className='title'>{this.props.titleText}</h3>
+                    <h6 className='sub-title'>{this.props.subTitle}</h6>
                     {this.renderErrors()}
                     <div className="login-form">
-                        {this.props.formType === 'signup' &&
+                        {this.props.formType === 'Register' &&
                             <label>First name <span className='star'>*</span>
                             <input type="text"
                                     value={this.state.first_name}
@@ -71,7 +74,7 @@ class SessionForm extends React.Component {
                             </label>
                         }
                         <label>Email
-                            {this.props.formType === 'signup' &&
+                            {this.props.formType === 'Register' &&
                                 <span className='star'> * </span>
                             }
                             <input type="text"
@@ -81,7 +84,7 @@ class SessionForm extends React.Component {
                             />
                         </label>
                         <label>Password
-                            {this.props.formType === 'signup' &&
+                            {this.props.formType === 'Register' &&
                                     <span className='star'> * </span>
                             }
                             <input type="password"
@@ -91,14 +94,14 @@ class SessionForm extends React.Component {
                             />
                         </label>
                         <input className="session-submit" type="submit" value={this.props.formType} />
-                        {this.props.formType === 'Sign in' && 
+                        
                             <div>
                                 <div className='divider'>
                                 <hr className='left' /> <span className="or">OR</span> <hr className='right'/>   
                                 </div>
                                 <button className='demo-user' onClick={this.handleClick}>Demo User</button>
                             </div>
-                        }
+                
                     </div>
                   
                 </form>
