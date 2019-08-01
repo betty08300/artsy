@@ -62,7 +62,7 @@ class SessionForm extends React.Component {
                     {this.renderErrors()}
                     <div className="login-form">
                         {this.props.formType === 'signup' &&
-                            <label>First name *
+                            <label>First name <span className='star'>*</span>
                             <input type="text"
                                     value={this.state.first_name}
                                     onChange={this.update('first_name')}
@@ -70,14 +70,20 @@ class SessionForm extends React.Component {
                                 />
                             </label>
                         }
-                        <label>Email *
+                        <label>Email
+                            {this.props.formType === 'signup' &&
+                                <span className='star'> * </span>
+                            }
                             <input type="text"
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                                className="login-input"
+                            value={this.state.email}
+                            onChange={this.update('email')}
+                            className="login-input"
                             />
                         </label>
-                        <label>Password *
+                        <label>Password
+                            {this.props.formType === 'signup' &&
+                                    <span className='star'> * </span>
+                            }
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}

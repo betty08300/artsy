@@ -7,7 +7,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         if (currentUser) {
             return (
                 <nav className='login-signup'>
-                    <div>
+                    <div className='login-signup-btn'>
                         <button className="header-button" onClick={logout}>Log Out</button>
                     </div>
                 </nav>

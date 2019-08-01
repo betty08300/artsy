@@ -1,7 +1,7 @@
 .navbar-wrapper{
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin: 20px 40px; 
 }
 
 .artsy-logo h1{
@@ -46,4 +46,11 @@
             color: #FFFFFF;
         }
     }
+
+    &.header-button{
+       button{
+           border:0;
+       }
+    }
+
 }
