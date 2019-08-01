@@ -14,10 +14,36 @@
 }
 
 .login-signup{
-    justify-content: space-between;
+    justify-content: flex-end;
     display: flex; 
     width: 300px; 
     background-color: white;
     align-items: center;
 }
 
+.login-signup-link-container {
+    padding-right: 15px;
+}
+
+.login-signup-btn {
+    color: #222222;
+    line-height: 16px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid #222222;
+    padding: 8px;
+
+    &.signup {
+        border: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &.login {
+        &:hover {
+            background-color: #444444;
+            color: #FFFFFF;
+        }
+    }
+}

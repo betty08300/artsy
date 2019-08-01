@@ -24,7 +24,7 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.handleForm(user).then(()=>{
-            this.props.history.push('/')
+            this.props.closeModal()
         });
     }
 
@@ -35,7 +35,7 @@ class SessionForm extends React.Component {
             password: 'betty2019'
         }
         this.props.handleForm(demo).then(()=>{
-            this.props.history.push('/')
+            this.props.closeModal()
         });
     }
 
@@ -61,13 +61,15 @@ class SessionForm extends React.Component {
                     <h6>{this.props.subTitle}</h6>
                     {this.renderErrors()}
                     <div className="login-form">
-                        <label>First name *
+                        {this.props.formType === 'signup' &&
+                            <label>First name *
                             <input type="text"
-                                value={this.state.first_name}
-                                onChange={this.update('first_name')}
-                                className="login-input"
-                            />
-                        </label>
+                                    value={this.state.first_name}
+                                    onChange={this.update('first_name')}
+                                    className="login-input"
+                                />
+                            </label>
+                        }
                         <label>Email *
                             <input type="text"
                                 value={this.state.email}
@@ -83,13 +85,18 @@ class SessionForm extends React.Component {
                             />
                         </label>
                         <input className="session-submit" type="submit" value={this.props.formType} />
-                        <div className='divider'>
-                            <hr className='left'/> OR <hr className='right'/>   
-                        </div>
-                        <button className='demo-user' onClick={this.handleClick}>Demo User</button>
+                        {this.props.formType === 'Sign in' && 
+                            <div>
+                                <div className='divider'>
+                                <hr className='left' /> <span className="or">OR</span> <hr className='right'/>   
+                                </div>
+                                <button className='demo-user' onClick={this.handleClick}>Demo User</button>
+                            </div>
+                        }
                     </div>
                   
                 </form>
+                {/* <div class="loader">Loading...</div> */}
             </div>
         
             
