@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ProductForm from './product_form';
 
 const msp = (state, ownProps) => {
-    const defaultPost = {
+    const defaultProduct = {
         id: '',
         title: '',
         description: '',
@@ -26,7 +26,9 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => {
     return {
-
+        updateProduct: (product) => dispatch(updateProduct(product)),
+        fetchProduct: (id) => dispatch(fetchProduct(id)),
+        deleteProduct: (id) => dispatch(deleteProduct(id))
     }
 }
 
