@@ -58,7 +58,7 @@ class Profile extends React.Component{
                     <li className="top">
                         <img className='profile-img' src='https://randomuser.me/api/portraits/lego/1.jpg' />
                         <div className='profile-details'>
-                            <p>{this.props.currentUser.first_name}</p>
+                            <p className='user-name'>{this.props.currentUser.first_name}</p>
                             {/* <p className='view-profile-btn'>
                                 View profile
                                 <span className='view-profile-icon'>
