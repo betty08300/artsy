@@ -4,7 +4,6 @@ import {
     RECEIVE_ALL_PRODUCTS,
     RECEIVE_PRODUCT,
     REMOVE_PRODUCT,
-    RECEIVE_PRODUCT_ERRORS,
 } from '../actions/product_actions';
 
 const productsReducer = (state={}, action) => {
@@ -20,9 +19,6 @@ const productsReducer = (state={}, action) => {
         case REMOVE_PRODUCT:
             // TODO: remove item from state 
             return;
-
-        case RECEIVE_PRODUCT_ERRORS:
-            return action.errors;
         
         default:
             return state;

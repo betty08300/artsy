@@ -11,6 +11,10 @@ import Modal from './modal';
 import GreetingContainer from './greeting/greeting_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
+import ProductIndexContainer from './products/products_index_container';
+import ProductShowContainer from './products/product_show_container';
+import ProductEditContainer from './products/product_edit_container';
+import CreateProductContainer from './products/product_create_container';
 // import SearchContainer from './search/search_container';
 // import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -31,7 +35,11 @@ const App = () => (
 
         
         <Switch>
-           
+           <Route exact path='/products' component={ProductIndexContainer}/>
+           <Route exact path='/products/:productId' component={ProductShowContainer}/>
+           <Route exact path='/products/:productId/edit' component={ProductEditContainer}/>
+           <Route exact path='/products/new' component={CreateProductContainer}/>
+
             
         </Switch>
     </div>
