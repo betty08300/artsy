@@ -16,7 +16,13 @@ class User < ApplicationRecord
     validates :email, :password_digest, :session_token, presence: true 
     validates :password, length: {minimum:6, allow_nil: true}
 
-    # need assoication 
+    
+    has_many :products, 
+        primary_key: :id,
+        foreign_key: :user_id, 
+        class_name: :Product 
+        
+
 
     after_initialize :ensure_session_token
     attr_reader :password
