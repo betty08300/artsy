@@ -1,22 +1,18 @@
 import React from 'react';
+import Profile from './profile_dropdown';
 
-
-const Greeting = ({ currentUser, logout, openModal }) => {
+const Greeting = ({ id, logout, openModal }) => {
     
+
+
     const sessionLinks =() => {
-        if (currentUser) {
+    
+        if (id) {
             return (
-                <nav className='login-signup'>
-                    <div className='login-signup-link-container'>
-                        <img className='profile-img' src='https://randomuser.me/api/portraits/lego/1.jpg'/>
-                        
-                    </div>
-                    <div>
-                        <button className="login-signup-btn" onClick={logout}>Log Out</button>
-                    </div>
-                </nav>
-
-
+                <div className='login-signup'>
+        <Profile/>
+                    
+                </div>
             )
         } else {
             return (

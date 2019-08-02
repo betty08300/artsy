@@ -23,6 +23,11 @@
 
 .login-signup-link-container {
     padding-right: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 .login-signup-btn {
@@ -60,4 +65,33 @@
     widows: 32px;
     border-radius: 100px;
     border: 1px solid #aaa;
+}
+
+.dropdown {
+    display: block;  
+    height: 200px;
+    width: 200px;  
+    
+}
+
+
+
+.logout {
+    margin: 10px 0; 
+    text-align: left; 
+    display: flex;     
+}
+
+
+.hide {
+    display: none;
+}
+
+hr { 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  color: #595959;
 }

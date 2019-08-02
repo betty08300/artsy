@@ -90,8 +90,9 @@ $button-height: 48px;
 
 .divider {
     margin-top: 10px;
-	width:300px;
-	text-align:center;
+    text-align:center;
+    display: flex;
+    align-items: center;
 }
 
 .divider hr {

@@ -23,6 +23,7 @@ const mdp = dispatch => {
         //     </button>
         // ),
         titleText: "Sign in to continue",
+        subTitle: 'Welcome back',
         closeModal: () => dispatch(closeModal()),
         loginDemoUser: (demo) => dispatch(login(demo))
     };
