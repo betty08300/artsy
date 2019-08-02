@@ -10,8 +10,7 @@ const Greeting = ({ id, logout, openModal }) => {
         if (id) {
             return (
                 <div className='login-signup'>
-        <Profile/>
-                    
+                    <Profile/>
                 </div>
             )
         } else {

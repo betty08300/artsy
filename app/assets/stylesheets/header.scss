@@ -65,19 +65,85 @@
     widows: 32px;
     border-radius: 100px;
     border: 1px solid #aaa;
+    text-align: center;
+}
+
+.text-link-container {
+    color: #595959;
+    font-size: 12px;
+
+}
+
+.text-link-copy {
+    display: inline;
+}
+
+.dropdown-arrow {
+    display: inline-block;
+    color: #bbb;
+    height: 5px;
+    width: 9px;
+    fill: currentColor;
 }
 
 .dropdown {
     display: block;  
-    height: 200px;
-    width: 200px;  
+    
+    width: 220px;  
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    position: absolute;
+    top: 80px;
+    left: 75%;
+
+    .profile-img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .top, .bottom {
+        padding: 18px 20px;
+    }
+
+    .top {
+        display: block;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        img {
+            float: left;
+        }
+    }
+}
+
+.profile-details {
+    margin-left: 61px;
+    line-height: 18px;
+    display: block;
+
+}
+
+.view-profile-btn {
+    border: 1px solid #e2e2e2;
+    font-size: 13px;
+    border-radius: 3px;
+    padding: 2px 8px;
+    color: #333;
+    display: inline-block;
+    vertical-align: bottom;
     
 }
 
-
+.view-profile-icon {
+    color: #ccc;
+    height: 14px;
+    width: 12px;
+    margin-left: 8px;
+    display: inline-block;
+    fill: currentColor;
+}
 
 .logout {
-    margin: 10px 0; 
+    margin: 0; 
     text-align: left; 
     display: flex;     
 }
