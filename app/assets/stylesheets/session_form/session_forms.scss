@@ -9,6 +9,7 @@ $button-height: 48px;
 .sub-title{
     font-size: 14px;
     font-weight: 300;  
+    padding-bottom: 15px; 
 }
 
 .login-form-box{
@@ -29,7 +30,7 @@ $button-height: 48px;
     label {
         padding-top: 10px;
         font-size: 14px;
-        font-weight: 500; 
+        font-weight: 550; 
         
     }
 }
@@ -48,12 +49,12 @@ $button-height: 48px;
 
 
 .login-form-box input:hover {
-    border: 1px solid black;
+    border: 1px solid #222222;
     transition: 0.5s ease;
 }
 
 .session-submit {
-    background-color: black;
+    background-color: #222222;
     color: white;
     font-weight: 500;
     margin-bottom: $button-height;
@@ -62,7 +63,7 @@ $button-height: 48px;
 }
 
 .login-form-box h3{
-    font-size: 20px;
+    font-size: 28px;
     padding: 10px 0;
     text-align: left;
 
@@ -72,7 +73,7 @@ $button-height: 48px;
 
 .demo-user{
     background-color: white;
-    color: black;
+    color: #222222 ;
     font-weight: 500;
     margin-bottom: 40px;
     width: 300px;
@@ -81,6 +82,10 @@ $button-height: 48px;
     height: 40px;
 
 
+}
+
+.error{
+    color: #E55400;  
 }
 
 .star {
@@ -113,6 +118,7 @@ $button-height: 48px;
 
 .or {
     color: #888888;
+    font-weight: lighter; 
 }
 
 .loader {
