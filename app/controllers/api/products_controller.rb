@@ -13,9 +13,10 @@ class Api::ProductsController < ApplicationController
     def create 
         @product = Product.new(product_params)
         if @product.save
-            render: show 
+            render :show 
         else 
-            render : json: @product.errors.full_messages, status: 422
+            render json: @product.errors.full_messages, status: 422
+    
         end 
     end 
 
@@ -35,7 +36,7 @@ class Api::ProductsController < ApplicationController
     def destroy
         @product = Product.find_by(params[:id])
         if @product.destroy
-            render : show 
+            render :show 
         else 
             render json: @product.errors.full_messages, status: 422
         end 
