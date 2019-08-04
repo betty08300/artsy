@@ -34,14 +34,6 @@ export const createProduct = (product) => dispatch => (
     ))
 ); 
 
-export const createProductForm = (product) => dispatch => (
-    ProductAPIUtil.createProductForm(product).then(product => (
-        dispatch(RECEIVE_PRODUCT(product))
-    ), err => (
-            dispatch(receiveProductErrors(err.responseJSON))
-    ))
-); 
-
 export const fetchAllProducts = () => dispatch => (
     ProductAPIUtil.fetchAllProducts().then(products => (
         dispatch(RECEIVE_ALL_PRODUCTS(products))
@@ -60,15 +52,6 @@ export const fetchProduct = (id) => dispatch => (
 
 export const updateProduct = (product) => dispatch => (
     ProductAPIUtil.updateProduct(product).then(product => (
-        dispatch(RECEIVE_PRODUCT(product))
-    ), err => (
-        dispatch(receiveProductErrors(err.responseJSON))
-    ))
-);
-
-
-export const updateProductForm = (product) => dispatch => (
-    ProductAPIUtil.updateProductForm(product).then(product => (
         dispatch(RECEIVE_PRODUCT(product))
     ), err => (
         dispatch(receiveProductErrors(err.responseJSON))

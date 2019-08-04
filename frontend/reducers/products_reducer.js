@@ -13,12 +13,12 @@ const productsReducer = (state={}, action) => {
             return action.products;
         
         case RECEIVE_PRODUCT:
-            const newProduct = { [action.product.id]: action.product };
-            return merge({}, state, newProduct)
+            return action.product;
 
         case REMOVE_PRODUCT:
-            // TODO: remove item from state 
-            return;
+            const newState = merge({}, state);
+            delete newState[Object.values(action.product)[0].id];
+            return newState;
         
         default:
             return state;

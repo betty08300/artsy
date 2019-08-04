@@ -2,16 +2,9 @@ export const createProduct = (product) => {
     return $.ajax({
         method: 'POST',
         url: `api/products`,
-        data: { product }
-
-    })
-}
-
-export const createProductForm = (product) => {
-    return $.ajax({
-        method: 'POST',
-        url: `api/products`,
-        data: { product },
+        data: product,
+        contentType: false,
+        processData: false
     })
 }
 
@@ -34,15 +27,9 @@ export const updateProduct = (product) => {
     return $.ajax({
         method: 'PATCH',
         url: `api/products/${product.id}`,
-        data: {product}
-    })
-}
-
-export const updateProductForm = (product) => {
-    return $.ajax({
-        method: 'PATCH',
-        url: `api/producs/${product.id}`,
-        data: product
+        data: product,
+        contentType: false,
+        processData: false
     })
 }
 

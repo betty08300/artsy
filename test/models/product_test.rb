@@ -7,7 +7,6 @@
 #  title       :string           not null
 #  description :string           not null
 #  price       :integer          not null
-#  images      :string           default([]), not null, is an Array
 #  who         :string           not null
 #  what        :string           not null
 #  when        :string           not null
