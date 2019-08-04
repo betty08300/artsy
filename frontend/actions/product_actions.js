@@ -28,7 +28,7 @@ export const receiveProductErrors = errors => ({
 
 export const createProduct = (product) => dispatch => (
     ProductAPIUtil.createProduct(product).then(product => (
-        dispatch(RECEIVE_PRODUCT(product))
+        dispatch(receiveProduct(product))
     ), err => (
             dispatch(receiveProductErrors(err.responseJSON))
     ))
@@ -36,7 +36,7 @@ export const createProduct = (product) => dispatch => (
 
 export const fetchAllProducts = () => dispatch => (
     ProductAPIUtil.fetchAllProducts().then(products => (
-        dispatch(RECEIVE_ALL_PRODUCTS(products))
+        dispatch(receiveAllProducts(products))
     ), err => (
             dispatch(receiveProductErrors(err.responseJSON))
     ))
@@ -44,7 +44,7 @@ export const fetchAllProducts = () => dispatch => (
 
 export const fetchProduct = (id) => dispatch => (
     ProductAPIUtil.fetchProduct(id).then(product => (
-        dispatch(RECEIVE_PRODUCT(product))
+        dispatch(receiveProduct(product))
     ), err => (
         dispatch(receiveProductErrors(err.responseJSON))
     ))
@@ -52,7 +52,7 @@ export const fetchProduct = (id) => dispatch => (
 
 export const updateProduct = (product) => dispatch => (
     ProductAPIUtil.updateProduct(product).then(product => (
-        dispatch(RECEIVE_PRODUCT(product))
+        dispatch(receiveProduct(product))
     ), err => (
         dispatch(receiveProductErrors(err.responseJSON))
     ))
@@ -60,7 +60,7 @@ export const updateProduct = (product) => dispatch => (
 
 export const deleteProduct = (id) => dispatch => (
     ProductAPIUtil.deleteProduct(id).then(product => (
-        dispatch(REMOVE_PRODUCT(id))
+        dispatch(removeProduct(id))
     ), err => (
         dispatch(receiveProductErrors(err.responseJSON))
     ))

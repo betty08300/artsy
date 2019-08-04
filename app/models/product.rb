@@ -15,12 +15,12 @@
 #
 
 class Product < ApplicationRecord
-    validates :user_id, :title, :description, :price, :images, :who, :what, :when, presence:true 
-
-    has_many_attached :images
+    validates :user_id, :title, :description, :price, :who, :what, :when, presence:true 
 
     belongs_to :seller,
         primary_key: :id,
         foreign_key: :user_id,
         class_name: :User 
+
+    has_many_attached :images
 end
