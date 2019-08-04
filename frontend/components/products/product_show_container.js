@@ -33,4 +33,4 @@ const mdp = dispatch => {
     }
 }
 
-export default connect(msp, msp)(ProductShow); 
+export default connect(msp, mdp)(ProductShow); 

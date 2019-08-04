@@ -12,7 +12,7 @@ const msp = (state, ownProps) => {
         what: '',
         when: '',
         user_id: state.session.id,
-        imgUrl: ''
+        images: []
 
     }
     let product = state.entities.products[ownProps.match.params.productId] || defaultProduct;

@@ -12,7 +12,7 @@ const msp =(state) => {
         what: '',
         when: '',
         user_id: state.session.id,
-        imgUrl: ''
+        images: []
 
     }
     return {
