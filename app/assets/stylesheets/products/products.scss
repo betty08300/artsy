@@ -33,6 +33,23 @@
 
 
     }
+
+    &.add-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #F0FBFD;
+        
+        height: 180px;
+        h1 {
+            font-weight: 600;
+            font-size: 36px;
+        }
+        a {
+            color: #34A8C4;
+        }
+    }
 }
 
 
@@ -44,4 +61,69 @@
 .right-col {
     float: right;
     width: percentage(1/3);
+
+    h1 {
+       font-family: 'Libre Caslon Text', serif;
+       width: auto;
+       color: #333;
+       text-rendering: optimizeLegibility;
+       display: block; 
+       margin-block-start: 0.67em;
+       margin-block-end: 0.67em;
+       margin-inline-start: 0px;
+       margin-inline-end: 0px;
+       font-size: 20px;
+       line-height: 26px;
+       font-weight: 400;
+    }
+
+    h3 {
+       color: #222222;
+       text-align: left;
+       font-weight: 500;
+       font-size: 18px; 
+       margin-top: 20px;
+
+    }    
+
+    .free-shipping {
+        display: block;
+        font-size: 14px;
+        color: #595959;
+        text-align: left; 
+        font-weight: 300;
+        line-height: 1.6;
+        margin-top:  20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    h2{
+        font-weight: 500;
+        font-size: 17px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+    }
+
+    .item-details {
+        font-size: 14px;
+        color: #222222;
+        display: block;
+        text-align: left;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+
+    }
+
+}
+
+.shop-header {
+    text-align: center;
+    margin-bottom: 50px;
+    h2 {
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
 }

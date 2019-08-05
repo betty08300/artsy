@@ -26,13 +26,17 @@ class ProductShow extends React.Component{
                 <div className="right-col">
                     <div>
                         <h1>{product.title}</h1>
+                        <link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Text&display=swap" rel="stylesheet"></link>
                     </div>
                     <div>
                         <h3>${(product.price).toFixed(2)}</h3>
                     </div>
+                    <div className='free-shipping'>
+                        <p>Free Shipping to United States</p>
+                    </div>
                     <div>
-                        <h2>Description</h2>
-                        <p>{product.description}</p>
+                        <h2>Item details</h2>
+                        <p className='item-details'>{product.description}</p>
                     </div>
                     {this.props.seller.id === this.props.userId &&
                     <Link to={`/products/${product.id}/edit`}>Edit</Link>

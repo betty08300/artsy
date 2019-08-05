@@ -34,8 +34,8 @@ export const createProduct = (product) => dispatch => (
     ))
 ); 
 
-export const fetchAllProducts = () => dispatch => (
-    ProductAPIUtil.fetchAllProducts().then(products => (
+export const fetchAllProducts = (userId) => dispatch => (
+    ProductAPIUtil.fetchAllProducts(userId).then(products => (
         dispatch(receiveAllProducts(products))
     ), err => (
             dispatch(receiveProductErrors(err.responseJSON))

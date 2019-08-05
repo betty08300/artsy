@@ -8,12 +8,12 @@ export const createProduct = (product) => {
     })
 }
 
-export const fetchAllProducts = () => {
+export const fetchAllProducts = (userId) => {
     return $.ajax({
         method: 'GET',
-        url: `api/products`
+        url: `api/products`,
+        data: {user_id: userId}
     })
-
 }
 
 export const fetchProduct = (id) => {

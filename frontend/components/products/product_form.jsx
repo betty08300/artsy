@@ -74,7 +74,6 @@ class ProductForm extends React.Component{
     }
 
     render(){
-        // debugger
         return(
             <div>
                 <form className='product-form' onSubmit={this.handleSubmit}>

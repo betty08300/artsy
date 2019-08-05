@@ -13,7 +13,7 @@ const Greeting = ({ id, logout, openModal }) => {
                 <div className='login-signup'>
                     <div className='shop'>
                         <img className='shop-icon'src="https://iconsplace.com/wp-content/uploads/_icons/ffa500/256/png/shop-icon-11-256.png"/>
-                        <Link to={`/products/new`} className='shop-manager'>Shop Manager</Link>
+                        <Link to={`/shop`} className='shop-manager'>Shop Manager</Link>
                     </div>
                     <Profile/>
                 </div>
