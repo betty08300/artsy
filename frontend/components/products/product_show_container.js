@@ -13,12 +13,12 @@ const msp = (state,ownProps) => {
         what: '',
         when: '',
         user_id: state.session.id,
-        imgUrl: ''
+        images: ''
 
     }
     
     let product = state.entities.products[ownProps.match.params.productId] || defaultProduct
-    let seller = state.entities.user[product.user_id]
+    let seller = state.entities.users[product.user_id]
     
     return {
         product,
@@ -29,7 +29,7 @@ const msp = (state,ownProps) => {
 
 const mdp = dispatch => {
     return{
-        fetchProduct: (id) => dispatch(fetchProduct)
+        fetchProduct: (id) => dispatch(fetchProduct(id))
     }
 }
 

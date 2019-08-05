@@ -34,7 +34,8 @@ class ProductForm extends React.Component{
 
     handleFile(e) {
         this.setState({
-            images: e.currentTarget.files
+            images: e.currentTarget.files,
+            fileUploaded: true
         });
     }
 
@@ -49,13 +50,26 @@ class ProductForm extends React.Component{
         formData.append('product[what]', this.state.what);
         formData.append('product[when]', this.state.when);
       
-        for (let i = 0; i < this.state.images.length; i++) {
-            formData.append('product[images][]', this.state.images[i]);
+        if (this.state.fileUploaded) {
+            for (let i = 0; i < this.state.images.length; i++) {
+                formData.append('product[images][]', this.state.images[i]);
+            }
         }
 
-        this.props.createProduct(formData).then(() => {
-            this.props.history.push('/products')
-        })
+        switch (this.props.formType) {
+            case "create":
+                this.props.createProduct(formData).then(() => {
+                    this.props.history.push('/')
+                });
+                break;
+            case "update":
+                formData.append('product[id]', this.state.id);
+                this.props.updateProduct(formData).then(() => {
+                    this.props.history.push('/')
+                });
+                break;
+        }
+        
     }
 
     render(){

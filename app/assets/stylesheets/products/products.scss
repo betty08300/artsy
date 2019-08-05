@@ -4,3 +4,13 @@
         width: 100%;
     }
 }
+
+.left-col {
+    float: left;
+    width: percentage(2/3);
+}
+
+.right-col {
+    float: right;
+    width: percentage(1/3);
+}

@@ -1,7 +1,8 @@
 .navbar-wrapper{
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 40px; 
+    // display: flex;
+    // justify-content: space-between;
+    margin: 50px 0px; 
+    border-bottom: 2px solid #ddd;
 }
 
 .artsy-logo h1{
@@ -23,7 +24,6 @@
 
 .login-signup-link-container {
     padding-right: 15px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -88,6 +88,7 @@
 
 .dropdown {
     display: block;  
+    background: #FFFFFF;
     
     width: 220px;  
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);

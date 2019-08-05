@@ -21,12 +21,13 @@ class Api::ProductsController < ApplicationController
     end 
 
     def show
-        @product = Product.find_by(params[:id])
+        @product = Product.find(params[:id])
     end 
 
     def update
-        @product = Product.find_by(params[:id])
-        if @product.update_attributes(product_params)
+        @product = Product.find(params[:id])
+        puts @product
+        if @product.update(product_params)
             render 'api/products/show'
         else 
             render json: @product.errors.full_messages, status: 422
@@ -34,7 +35,7 @@ class Api::ProductsController < ApplicationController
     end 
 
     def destroy
-        @product = Product.find_by(params[:id])
+        @product = Product.find(params[:id])
         if @product.destroy
             render :show 
         else 

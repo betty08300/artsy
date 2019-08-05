@@ -7,26 +7,35 @@ class ProductShow extends React.Component{
     }
 
     componentDidMount(){
-        this.props.fetchProduct(this.props.match.params.productId)
+        this.props.fetchProduct(this.props.match.params.productId);
     };
 
     componentDidUpdate(prevProps){
-        if (prevProps.match.params.prodcut.id != this.props.match.params.productId){
+        if (prevProps.match.params.productId != this.props.match.params.productId){
             this.props.fetchProduct(this.props.match.params.productId)
         }
     }
 
     render(){
+        const {product} = this.props;
         return(
             <div>
-                <div>
-                    <h2>Title</h2>
-                    <p>{this.props.prodcut.title}</p>
+                <div className="left-col">
+                    <img src={product.images[0]}/>
                 </div>
-                <div>
-                    <h2>Description</h2>
-                    <textarea>{this.props.product.description}</textarea>
+                <div className="right-col">
+                    <div>
+                        <h1>{product.title}</h1>
+                    </div>
+                    <div>
+                        <h3>${product.price}</h3>
+                    </div>
+                    <div>
+                        <h2>Description</h2>
+                        <p>{product.description}</p>
+                    </div>
                 </div>
+                
 
             </div>
             

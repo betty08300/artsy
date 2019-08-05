@@ -11,7 +11,6 @@ const rootReducer = combineReducers({
     session,
     errors,
     modal,
-    products,
 });
 
 export default rootReducer;

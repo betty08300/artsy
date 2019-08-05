@@ -23,26 +23,28 @@ const App = () => (
         <Modal />
         <header>
             <div className="navbar-wrapper">
-                <div>
-                    <Link to='/' className='artsy-logo'>
-                        <h1>Artsy</h1>
-                        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet"></link>
-                    </Link>
+                <div className='container navbar'>
+                    <div>
+                        <Link to='/' className='artsy-logo'>
+                            <h1>Artsy</h1>
+                            <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet"></link>
+                        </Link>
+                    </div>
+                    <GreetingContainer />
                 </div>
-                <GreetingContainer/>
+                
             </div>
         </header>
 
+        <div className="container">
+            <Switch>
+                <Route exact path='/' component={ProductIndexContainer} />
+                <Route exact path='/products/new' component={CreateProductContainer} />
+                <Route exact path='/products/:productId' component={ProductShowContainer} />
+                <Route exact path='/products/:productId/edit' component={ProductEditContainer} />
+            </Switch>
+        </div>
         
-        <Switch>
-           <Route exact path='/products' component={ProductIndexContainer}/>
-           <Route exact path='/products/new' component={CreateProductContainer} />
-           <Route exact path='/products/:productId' component={ProductShowContainer}/>
-           <Route exact path='/products/:productId/edit' component={ProductEditContainer}/>
-           
-
-            
-        </Switch>
     </div>
 );
 
