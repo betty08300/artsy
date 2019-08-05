@@ -1,4 +1,4 @@
-import { fetchAllProducts } from "../../util/product_api_util";
+import { fetchAllProducts } from '../../actions/product_actions';
 import { connect } from "react-redux";
 import ProductsIndex from './products_index'; 
 

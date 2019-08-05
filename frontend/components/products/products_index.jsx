@@ -4,7 +4,7 @@ import ProductsIndexItem from './products_index_item';
 
 class ProductIndex extends React.Component{
    componentDidMount(){
-       this.props.fetchAllProducts()
+       this.props.fetchAllProducts();
    }
 
   
@@ -14,7 +14,7 @@ class ProductIndex extends React.Component{
             <div>
                 <ul>
                     {this.props.products.map(product => {
-                        return <ProductIndexItem products={products} key={product.id} />
+                        return <ProductsIndexItem product={product} key={product.id} />
                     })}
                 </ul>
             </div>
