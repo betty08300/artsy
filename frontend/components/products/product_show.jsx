@@ -34,6 +34,9 @@ class ProductShow extends React.Component{
                         <h2>Description</h2>
                         <p>{product.description}</p>
                     </div>
+                    {this.props.seller.id === this.props.userId &&
+                    <Link to={`/products/${product.id}/edit`}>Edit</Link>
+                    }
                 </div>
                 
 
