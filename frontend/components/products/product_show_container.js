@@ -8,7 +8,7 @@ const msp = (state,ownProps) => {
         id: '',
         title: '',
         description: '',
-        price: '',
+        price: 0,
         who: '',
         what: '',
         when: '',

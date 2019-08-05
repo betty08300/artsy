@@ -28,7 +28,7 @@ class ProductShow extends React.Component{
                         <h1>{product.title}</h1>
                     </div>
                     <div>
-                        <h3>${product.price}</h3>
+                        <h3>${(product.price).toFixed(2)}</h3>
                     </div>
                     <div>
                         <h2>Description</h2>

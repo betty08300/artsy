@@ -28,6 +28,7 @@ class ProductForm extends React.Component{
 
     update(field){
         return(e) => {
+            // debugger
             this.setState({[field]: e.target.value})
         };
     }
@@ -45,7 +46,7 @@ class ProductForm extends React.Component{
         formData.append('product[user_id]', this.state.user_id);
         formData.append('product[title]', this.state.title);
         formData.append('product[description]', this.state.description);
-        formData.append('product[price]', this.state.price);
+        formData.append('product[price]', parseFloat(this.state.price));
         formData.append('product[who]', this.state.who);
         formData.append('product[what]', this.state.what);
         formData.append('product[when]', this.state.when);
@@ -73,6 +74,7 @@ class ProductForm extends React.Component{
     }
 
     render(){
+        // debugger
         return(
             <div>
                 <form className='product-form' onSubmit={this.handleSubmit}>
@@ -118,13 +120,13 @@ class ProductForm extends React.Component{
                     </select>
 
                     <label>Price *
-                        <input type="number" onChange={this.update('price')} value={this.state.price} min='0.01' step='0.01' required/>
+                        <input type="number" onChange={this.update('price')} value={parseFloat(this.state.price).toFixed(2)} min='0' step='0.01' required/>
                     </label>
 
                     <label>Photos *
                         <input type="file" onChange={this.handleFile} multiple />
                     </label>
-                    <button>Submit</button>
+                    <button>Save</button>
                 </form>
             </div>
         )

@@ -14,6 +14,31 @@
     flex-direction: column;
 }
 
+.shop {
+    float: right;
+    text-align: center;
+    width: 100px; 
+    border-right: 1px solid #eee;
+    margin-right: 15px;
+}
+     
+    
+.shop-manager {
+    font-size: 12px;
+    color: #595955;
+    display: inline-block;
+}
+
+.shop-icon {
+    color: #666666;
+    width: 30px;
+    height: 100%;
+    display: inline-block; 
+}
+
+
+
+
 .login-signup{
     justify-content: flex-end;
     display: flex; 

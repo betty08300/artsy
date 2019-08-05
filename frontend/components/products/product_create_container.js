@@ -7,7 +7,7 @@ const msp =(state) => {
         id: '',
         title: '',
         description: '',
-        price: '',
+        price: 0,
         who: '',
         what: '',
         when: '',
