@@ -77,55 +77,77 @@ class ProductForm extends React.Component{
         return(
             <div>
                 <form className='product-form' onSubmit={this.handleSubmit}>
-                    <label>
-                        <h2>Title *</h2>
-                        <input type="text" onChange={this.update('title')} value={this.state.title} required/>
-                    </label>
-                    <label>
-                        <h2>Description *</h2>
-                        <textarea type="text" onChange={this.update('description')} value={this.state.description} required></textarea>
-                    </label>
-                    <label>About this listing *</label>
-                    <select onChange={this.update('who')} value={this.state.who}>
-                        <option value="Who made it?">Who made it?</option>
-                        <optgroup label="Select a maker">
-                            <option value="I did">I did</option>
-                            <option value="A member of my shop">A member of my shop</option>
-                            <option value="Another company or person">Another company or person</option>
-                        </optgroup>
+                    <div className='photo-row'>
+                        <h2>Photos</h2>
+                        <h3>Add as many as you can so buyers can see every detail.</h3>
+                        <label>Photos * </label>
+                        <p>Use up to ten photos to show your item's most important qualities.</p>
+                    
+                            <div className='photo-item'>
+                                <input type="file" onChange={this.handleFile} multiple/>
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBNuizqdv7ZS4DkHbt65u1QNOwZeo4PQ7kDI_UPgXvzzqgcsX6ug" />
+                                    <p>Add a photo</p>         
+                            </div>
+                    </div>
+                
+                    <h2>Listing details</h2>
+                    <div className='title-row'>
+                        <label> Title * </label> 
+                        <p>Include keywords that buyers would use to search for your item.</p>
+                        
+                            <input className='input-title' type="text" onChange={this.update('title')} value={this.state.title} required />
+                    </div>
+                  
 
-                    </select>
+                   <div className='about-listing'>
+                        <label>About this listing *</label>
+                        <select onChange={this.update('who')} value={this.state.who}>
+                            <option value="Who made it?">Who made it?</option>
+                            <optgroup label="Select a maker">
+                                <option value="I did">I did</option>
+                                <option value="A member of my shop">A member of my shop</option>
+                                <option value="Another company or person">Another company or person</option>
+                            </optgroup>
 
-                    <select onChange={this.update('what')} value={this.state.what}>
-                        <option value="What is it?">What is it?</option>
-                        <optgroup label="Select a use">
-                            <option value="A finished product">A finished product</option>
-                            <option value="A supply or tool to make things">A supply or tool to make things</option>
-                        </optgroup>
-                    </select>
+                        </select>
 
-                    <select onChange={this.update('when')} value={this.state.when}>
-                        <option value="When did you make it?">When did you make it?</option>
-                        <optgroup label="Not made yet">
-                            <option value="Made to order">Made to order</option>
-                        </optgroup>
-                        <optgroup label="Recently">
-                            <option value="2010 - 2019">2010 - 2019</option>
-                            <option value="2000 - 2009">2000 - 2009</option>
-                        </optgroup>
-                        <optgroup label="Vintage">
-                            <option value="Before 2000">Before 2000</option>
-                        </optgroup>
-                    </select>
+                        <select onChange={this.update('what')} value={this.state.what}>
+                            <option value="What is it?">What is it?</option>
+                            <optgroup label="Select a use">
+                                <option value="A finished product">A finished product</option>
+                                <option value="A supply or tool to make things">A supply or tool to make things</option>
+                            </optgroup>
+                        </select>
 
-                    <label>Price *
-                        <input type="number" onChange={this.update('price')} value={parseFloat(this.state.price).toFixed(2)} min='0' step='0.01' required/>
-                    </label>
+                        <select onChange={this.update('when')} value={this.state.when}>
+                            <option value="When did you make it?">When did you make it?</option>
+                            <optgroup label="Not made yet">
+                                <option value="Made to order">Made to order</option>
+                            </optgroup>
+                            <optgroup label="Recently">
+                                <option value="2010 - 2019">2010 - 2019</option>
+                                <option value="2000 - 2009">2000 - 2009</option>
+                            </optgroup>
+                            <optgroup label="Vintage">
+                                <option value="Before 2000">Before 2000</option>
+                            </optgroup>
+                        </select>
+                   </div>
 
-                    <label>Photos *
-                        <input type="file" onChange={this.handleFile} multiple />
-                    </label>
-                    <button>Save</button>
+                    <div className='description-row'>
+                        <label> Description * </label>
+                            <textarea className='input-description' type="text" onChange={this.update('description')} value={this.state.description} required></textarea>
+                    </div>
+                    
+                   <div className='price-row'>
+                        <label>Price *</label>
+                        <input className='price-input' type="number" onChange={this.update('price')} value={parseFloat(this.state.price).toFixed(2)} min='0' step='0.01' required />
+                   </div>
+
+
+                    <div className='button-row'>
+                        <button>Save</button>
+                    </div>
                 </form>
             </div>
         )

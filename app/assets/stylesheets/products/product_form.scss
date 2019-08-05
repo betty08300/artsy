@@ -1,16 +1,145 @@
 .product-form {
+    
+  
+   
+
+    > div {
+        border: 1px solid #E1E3DF;
+        padding-bottom: 20px;
+        padding-left: 10px;
+
+
+    }
 
     label {
         display: block;
-        h2 {
-            display: inline;
-        }
         font-weight: 500;
         font-size: 14px;
+        padding: 20px 10px 9px 10px; 
+        text-align: left;
+        font-weight: 550;
 
         input {
             display: inline;
+
         }
     }
+
+    h3 {
+        display: block;
+        padding: 10px;
+        color: #595959;
+        font-size: 14px;
+
+    }
+
+    h2{
+        padding: 10px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+
+    }
+
+    p {
+        display: flex;
+        justify-content: flex-start; 
+        padding-left: 10px; 
+        line-height: 1.4;
+        font-size: 12px;
+    }
+
+    .photo-row{
+        height: 450px;
+        display: block; 
+        justify-content: space-between;
+
+    }
+
+    .title-row{
+        height: 200px;
+        display: block;
+        justify-content: space-between;
+
+        .input-title{
+           height: 38px; 
+           padding: 10px;
+           font-size: 14px; 
+           display: block;
+        //    border-color: rgba(0, 0, 0, 0.15);
+           width: 100%; 
+        }
+
+    }
+
+    .about-listing{
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+
+        select{
+            margin: 20px; 
+        }
+
+    }
+
+    .description-row{
+        height: 400px;
+        display: flex;
+        justify-content: space-between;
+    
+
+
+        .input-description{
+           height: 276px; 
+           padding: 10px;
+           font-size: 14px; 
+           display: flex;
+        //    border-color: rgba(0, 0, 0, 0.15);
+           width: 90%; 
+           justify-content: flex-end;
+           padding-left: 10px;
+        }
+    }
+
+    .price-row{
+        display: flex;
+        justify-content: space-between;
+
+        .price-input {
+            padding-left: 22px;
+            border-radius: 3px;
+            font-size: 14px;
+            height: 38px;
+            padding-top: 9px;
+            padding-right: 12px;
+            position: relative;
+           
+        }
+    }
+
+    .button-row{
+        display: flex; 
+        justify-content: flex-end;
+    }
+
+    .photo-item{
+        img{
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            margin-left: 10%; 
+            border: 2px solid#eee;
+            
+        }
+    }
+
+
+
 }
+
+   
+
 
