@@ -8,7 +8,7 @@
 Product.destroy_all
 
 p1 = Product.create(title: 'A Baby is Brewing', description: 'Collapsible Foam, 12oz Cans. A Baby is Brewing, Baby Shower Decorations, Baby Announcement, Baby Girl Baby Shower, Baby Shower Can Cooler,Baby Shower Giveaways by My Wedding Store!', price: 24.99, user_id: 24, who: 'A member of my shop', what: 'A finished product', when: 'Made to order')
-p1.images.attach(io: File.open('/Users/bettywren/Desktop/artsy/baby_shower.jpg'), filename: 'baby_shower.jpg')
+p1.images.attach(io: File.open("/Users/bettywren/Desktop/artsy/baby_shower.jpg"), filename: "baby_shower.jpg")
 
 p2 = Product.create(title: 'This is My Road Trip Shirt Vacation Summer Family Vacation Baby Unisex Bodysuit', description: 'This is My Road Trip Shirt! Cute baby bodysuit perfect for that vacation with the family! There is a mini bus in the center, which gives a fun retro look.', price: 15.50, user_id: 24, who: 'A member of my shop', what: 'A finished product', when: 'Made to order')
 p2.images.attach(io: File.open('/Users/bettywren/Desktop/artsy/baby_shirt_1.jpg'), filename: '/baby_shirt_1.jpg')

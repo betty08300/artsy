@@ -9,6 +9,7 @@ class Gallery extends React.Component {
         }
     }
 
+
     handleClick(idx) {
         this.setState({
             selectedImgIdx: idx
@@ -16,8 +17,8 @@ class Gallery extends React.Component {
     }
 
     render() {
-        // debugger
-        const thumbnails = this.state.images.map((image, i) => {
+        console.log('images: ' + this.props.images);
+        let thumbnails = this.props.images.map((image, i) => {
             return (
                 <div className='image-thumb' key={i} onClick={this.handleClick.bind(this, i)}>
                     <img src={image} />
@@ -31,7 +32,7 @@ class Gallery extends React.Component {
                     { thumbnails }
                 </div>
                 <div className='big-image'>
-                    <img src={this.state.images[this.state.selectedImgIdx]} />
+                    <img src={this.props.images[this.state.selectedImgIdx]} />
                 </div>
             </div>
         )
