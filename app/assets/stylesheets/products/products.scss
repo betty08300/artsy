@@ -137,3 +137,34 @@
         margin-bottom: 12px;
     }
 }
+
+.gallery {
+    width: 100%;
+    display: flex;
+
+    .thumbnails-container {
+        width: 66px;
+    }
+
+    .image-thumb {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 6px;
+        background: #FAF9F5;
+        border-color: #E1E3DF;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .big-image {
+        margin-left: 6px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

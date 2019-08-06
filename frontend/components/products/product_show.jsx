@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Gallery from './gallery'
 
 class ProductShow extends React.Component{
     constructor(props){
@@ -18,10 +19,12 @@ class ProductShow extends React.Component{
 
     render(){
         const {product} = this.props;
+        console.log(product.images);
         return(
             <div className='product-container'>
                 <div className="left-col">
-                    <img className='product-img-full' src={product.images[0]}/>
+                    {/* <img className='product-img-full' src={product.images[0]}/> */}
+                    <Gallery images={product.images} />
                 </div>
                 <div className="right-col">
                     <div>
