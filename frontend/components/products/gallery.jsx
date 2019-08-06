@@ -16,6 +16,7 @@ class Gallery extends React.Component {
     }
 
     render() {
+        // debugger
         const thumbnails = this.state.images.map((image, i) => {
             return (
                 <div className='image-thumb' key={i} onClick={this.handleClick.bind(this, i)}>

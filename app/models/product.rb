@@ -6,7 +6,7 @@
 #  user_id     :integer          not null
 #  title       :string           not null
 #  description :string           not null
-#  price       :integer          not null
+#  price       :float            not null
 #  who         :string           not null
 #  what        :string           not null
 #  when        :string           not null
@@ -23,4 +23,9 @@ class Product < ApplicationRecord
         class_name: :User 
 
     has_many_attached :images
+
+    has_many :shopping_carts,
+        foreign_key: :product_id,
+        class_name: :ShoppingCart 
+        
 end

@@ -18,9 +18,11 @@ class ProductShow extends React.Component{
     }
 
     render(){
+       
         const {product} = this.props;
-        console.log(product.images);
+        // console.log(product.images);
         return(
+            
             <div className='product-container'>
                 <div className="left-col">
                     {/* <img className='product-img-full' src={product.images[0]}/> */}

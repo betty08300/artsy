@@ -21,6 +21,11 @@ class User < ApplicationRecord
         primary_key: :id,
         foreign_key: :user_id, 
         class_name: :Product 
+
+    has_one :shopping_cart,
+        foreign_key: :user_id,
+        class_name: :ShoppingCart 
+        
         
 
 
