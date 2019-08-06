@@ -24,8 +24,8 @@ class Product < ApplicationRecord
 
     has_many_attached :images
 
-    has_many :shopping_carts,
+    has_many :shopping_cart_items,
         foreign_key: :product_id,
-        class_name: :ShoppingCart 
+        class_name: :ShoppingCartItem 
         
 end

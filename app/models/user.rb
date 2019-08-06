@@ -22,9 +22,9 @@ class User < ApplicationRecord
         foreign_key: :user_id, 
         class_name: :Product 
 
-    has_one :shopping_cart,
+    has_many :shopping_cart_items,
         foreign_key: :user_id,
-        class_name: :ShoppingCart 
+        class_name: :ShoppingCartItem
         
         
 
