@@ -19,7 +19,6 @@ class ProductShow extends React.Component{
 
     render(){
         const {product} = this.props;
-        console.log(product.images);
         return(
             <div className='product-container'>
                 <div className="left-col">

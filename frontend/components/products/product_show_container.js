@@ -13,7 +13,7 @@ const msp = (state,ownProps) => {
         what: '',
         when: '',
         user_id: state.session.id,
-        images: ''
+        images: []
 
     }
     
