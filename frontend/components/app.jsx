@@ -16,7 +16,7 @@ import ProductShowContainer from './products/product_show_container';
 import ProductEditContainer from './products/product_edit_container';
 import CreateProductContainer from './products/product_create_container';
 import ShopIndexContainer from './shop/shop_index_container';
-// import CartIndexCOntainer from 
+// import CartIndexContainer from 
 // import SearchContainer from './search/search_container';
 // import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
