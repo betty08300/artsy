@@ -12,7 +12,7 @@ class ProductIndex extends React.Component{
     render() {
         return (
             <div className='recently-add-products'>
-                <div className='recently-add'>Recently Add</div>
+                <div className='recently-add'>Recently Added</div>
                 <div className='products-grid'>
                     {this.props.products.map(product => {
                         return <ProductsIndexItem product={product} key={product.id} />
