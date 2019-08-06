@@ -16,7 +16,7 @@ import ProductShowContainer from './products/product_show_container';
 import ProductEditContainer from './products/product_edit_container';
 import CreateProductContainer from './products/product_create_container';
 import ShopIndexContainer from './shop/shop_index_container';
-// import CartIndexContainer from 
+import ShoppingCartIndexContainer from './shopping_cart_items/shopping_cart_item_container';
 // import SearchContainer from './search/search_container';
 // import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -45,7 +45,7 @@ const App = () => (
                 <Route exact path='/products/:productId' component={ProductShowContainer} />
                 <Route exact path='/products/:productId/edit' component={ProductEditContainer} />
                 <Route exact path='/shop' component={ShopIndexContainer} />
-                {/* <Route exact path='/cart' component={CartIndexContainer}/> */}
+                <Route exact path='/cart' component={ShoppingCartIndexContainer}/>
 
             </Switch>
         </div>

@@ -12,6 +12,7 @@ class ShopIndex extends React.Component {
     }
 
     render() {
+        
         const products = this.props.products.map((product) => {
             return (
                 <ProductsIndexItem

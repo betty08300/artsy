@@ -46,6 +46,12 @@ class ProductShow extends React.Component{
                     {this.props.seller.id === this.props.userId &&
                     <Link to={`/products/${product.id}/edit`}>Edit</Link>
                     }
+
+                    <div>
+                        {this.props.userId &&
+                            <Link to={`/cart`}> Add to cart</Link>   
+                        }
+                    </div>
                 </div>
                 
 
