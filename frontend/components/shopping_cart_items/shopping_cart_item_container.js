@@ -13,7 +13,7 @@ const msp = (state) => {
 
 const mdp = dispatch => {
     return {
-        fetchAllShoppingCartItems: () => dispatch(fetchAllShoppingCartItems(user_id)),
+        fetchAllShoppingCartItems: (user_id) => dispatch(fetchAllShoppingCartItems(user_id)),
         deleteShoppingCartItem: (id) => dispatch(deleteShoppingCartItem(id)),
         updateShoppingCartItem: (shoppingCartItem) => dispatch(updateShoppingCartItem(shoppingCartItem))
 

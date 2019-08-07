@@ -7,6 +7,10 @@ class ShoppingCartIndex extends React.Component{
         super(props);
         
     }
+
+    componentDidMount() {
+        this.props.fetchAllShoppingCartItems(this.props.user_id);
+    }
     
     totalQty(){
         return this.props.items.length; 
@@ -16,7 +20,7 @@ class ShoppingCartIndex extends React.Component{
         let sum = 0;
         for(let i = 0; i < this.props.items.length; i++){
             let item = this.props.items[i];
-            sum += (parseFloat(item * item.quantity) * parseFloat(item.price))
+            sum += (parseFloat(item.quantity) * parseFloat(item.price))
         }
         return sum.toFixed(2)
     }

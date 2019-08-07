@@ -25,19 +25,20 @@ class ShoppingCartIndexItem extends React.Component{
 
 
     render(){
+        const {item} = this.props;
         return(
             <div>
                 <div>
-                    <Link to={`/products/${this.props.item.product_id}`}></Link>
-                    <img src={this.props.item.imageUrl} />
+                    <Link to={`/products/${item.product_id}`}></Link>
+                    <img src={item.images[0]} />
                     <h2>{item.title}</h2>
                 </div>
 
-                <button onClick={() => this.props.deleteShoppingCartItem(this.props.item.id)}>Remove</button>
+                <button onClick={() => this.props.deleteShoppingCartItem(item.id)}>Remove</button>
                 <input id="quantity" type="number" onChange={this.update('quantity')} min="1" max="50" value={this.state.quantity} />
                 <div>
                     <h3>${this.totalPrice()}</h3>
-                    <h6>(${this.props.item.price})</h6>
+                    <h6>(${item.price} each)</h6>
                 </div>
 
             </div>
