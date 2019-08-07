@@ -5,16 +5,16 @@ class ShoppingCartIndexItem extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            id: this.props.item.id,
+            // id: this.props.item.id,
             quantity: this.props.item.quantity,
-            price: this.props.item.price || 0
+            // price: this.props.item.price || 0
         }
     
 
     }
 
     totalPrice(){
-        let total = (parseFloat(this.state.quantity) * parseFloat(this.state.price)).toFixed(2);
+        let total = (parseFloat(this.state.quantity) * parseFloat(this.props.item.price)).toFixed(2);
         return total; 
     }
 
@@ -36,10 +36,21 @@ class ShoppingCartIndexItem extends React.Component{
                 </div>
 
                 <button onClick={this.props.deleteProduct.bind(this, item.id)}>Remove</button>
-                <input id="quantity" type="number" onChange={this.update('quantity')} min="1" max="50" value={this.state.quantity} />
+                <select onChange={this.update('quantity')} name="quantity" value={this.state.quantity}>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
                 <div>
                     <h3>${this.totalPrice()}</h3>
-                    <h6>(${(this.state.price).toFixed(2)} each)</h6>
+                    <h6>(${(item.price).toFixed(2)} each)</h6>
                 </div>
 
             </div>
