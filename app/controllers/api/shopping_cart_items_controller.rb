@@ -11,7 +11,14 @@ class Api::ShoppingCartItemsController < ApplicationController
         # todo: make sure to check if cart item already exists for user.
         # if so, do not create a duplicate. find the item and increase the
         # quantity by 1. 
-        @shopping_cart_item = ShoppingCartItem.new(shopping_cart_item_params)
+        @shopping_cart_item = ShoppingCartItem.find_by(user_id: params[:shopping_cart_item][:user_id], product_id: params[:shopping_cart_item][:product_id])
+        puts @shopping_cart_item
+        if @shopping_cart_item
+            @shopping_cart_item.quantity += 1
+        else
+            @shopping_cart_item = ShoppingCartItem.new(shopping_cart_item_params)
+        end
+
         if @shopping_cart_item.save 
             render :show
         else 

@@ -7,7 +7,7 @@ class ShoppingCartIndexItem extends React.Component{
         this.state = {
             id: this.props.item.id,
             quantity: this.props.item.quantity,
-            price: this.props.item.price 
+            price: this.props.item.price || 0
         }
     }
 
@@ -38,7 +38,7 @@ class ShoppingCartIndexItem extends React.Component{
                 <input id="quantity" type="number" onChange={this.update('quantity')} min="1" max="50" value={this.state.quantity} />
                 <div>
                     <h3>${this.totalPrice()}</h3>
-                    <h6>(${item.price} each)</h6>
+                    <h6>(${(this.state.price).toFixed(2)} each)</h6>
                 </div>
 
             </div>
