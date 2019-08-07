@@ -16,7 +16,7 @@ const shoppingCartItemsReducer = (state={}, action) => {
 
         case REMOVE_SHOPPING_CART_ITEM: 
             let newState = merge({}, state);
-            delete newState[action.shoppingCartItem.id];
+            delete newState[action.shoppingCartItemId];
             return newState;
             
         default:

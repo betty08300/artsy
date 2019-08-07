@@ -22,7 +22,7 @@ const receiveAllShoppingCartItems = (shoppingCartItems) => {
 const removeShoppingCartItem = (id) => {
     return {
         type: REMOVE_SHOPPING_CART_ITEM,
-        ShoppingCartItemId: id 
+        shoppingCartItemId: id 
     }
 }
 

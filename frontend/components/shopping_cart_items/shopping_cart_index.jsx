@@ -5,7 +5,7 @@ import ShoppingCartIndexItem from './shopping_cart_index_item';
 class ShoppingCartIndex extends React.Component{
     constructor(props){
         super(props);
-        
+        this.deleteProduct = this.deleteProduct.bind(this);
     }
 
     componentDidMount() {
@@ -25,6 +25,12 @@ class ShoppingCartIndex extends React.Component{
         return sum.toFixed(2)
     }
 
+    deleteProduct(id) {
+        this.props.deleteShoppingCartItem(id).then(()=>{
+            this.props.fetchAllShoppingCartItems(this.props.user_id);
+        });
+    }
+
 
     render(){
         return(
@@ -32,7 +38,7 @@ class ShoppingCartIndex extends React.Component{
                 <h1>{this.totalQty()} items in your cart</h1>
                 <ul>
                     {this.props.items.map((item)=>(
-                        <ShoppingCartIndexItem item={item} key={item.id}/>
+                        <ShoppingCartIndexItem deleteProduct={this.deleteProduct} item={item} key={item.id}/>
                     )
                     )}
                 </ul>
