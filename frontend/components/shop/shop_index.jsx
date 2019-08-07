@@ -12,12 +12,14 @@ class ShopIndex extends React.Component {
     }
 
     render() {
-        
+
         const products = this.props.products.map((product) => {
             return (
-                <ProductsIndexItem
-                    key={product.id}
-                    product={product}/>
+                <Link to={`/products/${product.id}/edit`} key={product.id} className='products-grid-item'>
+                    <ProductsIndexItem
+                        product={product} />
+                </Link>
+                
             )
         })
         return (

@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ProductsIndexItem from './products_index_item';
+import { Link } from 'react-router-dom';
 
 class ProductIndex extends React.Component{
    componentDidMount(){
@@ -15,7 +16,11 @@ class ProductIndex extends React.Component{
                 <div className='recently-add'>Recently Added</div>
                 <div className='products-grid'>
                     {this.props.products.map(product => {
-                        return <ProductsIndexItem product={product} key={product.id} />
+                        return (
+                            <Link to={`/products/${product.id}`} key={product.id} className='products-grid-item'>
+                                <ProductsIndexItem product={product}  />
+                            </Link>
+                        )
                     })}
                 </div>
             </div>
