@@ -1,4 +1,5 @@
 import { fetchProduct } from '../../actions/product_actions';
+import { creatShoppingCartItem } from '../../actions/shopping_cart_action';
 import { connect } from 'react-redux';
 import ProductShow from './product_show';
 
@@ -29,7 +30,8 @@ const msp = (state,ownProps) => {
 
 const mdp = dispatch => {
     return{
-        fetchProduct: (id) => dispatch(fetchProduct(id))
+        fetchProduct: (id) => dispatch(fetchProduct(id)),
+        creatShoppingCartItem: (item) => dispatch(creatShoppingCartItem(item))
     }
 }
 

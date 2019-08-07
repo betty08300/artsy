@@ -5,6 +5,7 @@ import Gallery from './gallery'
 class ProductShow extends React.Component{
     constructor(props){
         super(props);
+        this.addToCart = this.addToCart.bind(this);
     }
 
     componentDidMount(){
@@ -15,6 +16,17 @@ class ProductShow extends React.Component{
         if (prevProps.match.params.productId != this.props.match.params.productId){
             this.props.fetchProduct(this.props.match.params.productId)
         }
+    }
+
+    addToCart() {
+        const params = {
+            'user_id': this.props.userId,
+            'product_id': this.props.product.id,
+            'quantity': 1
+        }
+        this.props.creatShoppingCartItem(params).then(() => {
+            this.props.history.push('/cart');
+        });
     }
 
     render(){
@@ -43,13 +55,10 @@ class ProductShow extends React.Component{
                         <h2>Item details</h2>
                         <p className='item-details'>{product.description}</p>
                     </div>
-                    {this.props.seller.id === this.props.userId &&
-                    <Link to={`/products/${product.id}/edit`}>Edit</Link>
-                    }
 
                     <div>
                         {this.props.userId &&
-                            <Link to={`/cart`}> Add to cart</Link>   
+                            <button onClick={this.addToCart}> Add to cart</button>   
                         }
                     </div>
                 </div>
