@@ -25,14 +25,6 @@ class ShoppingCartIndexItem extends React.Component{
         }
     }
 
-    // removeProduct(id) {
-    //     this.props.deleteShoppingCartItem(id);
-    // }
-
-    deleteProduct(id) {
-        this.props.deleteProduct(id);
-    }
-
     render(){
         const {item} = this.props;
         return(
@@ -43,7 +35,7 @@ class ShoppingCartIndexItem extends React.Component{
                     <h2>{item.title}</h2>
                 </div>
 
-                <button onClick={this.deleteProduct.bind(this, item.id)}>Remove</button>
+                <button onClick={this.props.deleteProduct.bind(this, item.id)}>Remove</button>
                 <input id="quantity" type="number" onChange={this.update('quantity')} min="1" max="50" value={this.state.quantity} />
                 <div>
                     <h3>${this.totalPrice()}</h3>

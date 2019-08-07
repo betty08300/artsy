@@ -42,8 +42,8 @@ export const creatShoppingCartItem = (shoppingCartItem) => dispatch => {
 }
 
 export const deleteShoppingCartItem = (id) => dispatch => {
-    return ShoppingCartAPIUtil.deleteShoppingCartItem(id).then((id)=>{
-        return dispatch(removeShoppingCartItem(id))
+    return ShoppingCartAPIUtil.deleteShoppingCartItem(id).then((cartItem)=>{
+        return dispatch(removeShoppingCartItem(cartItem.id))
     }, (errors) => {
             return dispatch(receiveShoppingCartItemErrors(errors.responsJSON))
     }) 
