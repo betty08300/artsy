@@ -1,5 +1,6 @@
 class Api::ShoppingCartItemsController < ApplicationController 
-    before_action :require_login
+    # before_action :require_login
+    # todo: undo this
 
     def index 
         @shopping_cart_items = ShoppingCartItem.where(user_id: params[:user_id])
@@ -7,6 +8,9 @@ class Api::ShoppingCartItemsController < ApplicationController
     end 
 
     def create 
+        # todo: make sure to check if cart item already exists for user.
+        # if so, do not create a duplicate. find the item and increase the
+        # quantity by 1. 
         @shopping_cart_item = ShoppingCartItem.new(shopping_cart_item_params)
         if @shopping_cart_item.save 
             render :show

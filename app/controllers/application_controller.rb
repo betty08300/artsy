@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
-    protect_from_forgery with: :exception
+    protect_from_forgery with: :null_session
+    # todo: change back
 
     helper_method :current_user, :current_user_id, :logged_in?
 
