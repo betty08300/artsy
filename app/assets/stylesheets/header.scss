@@ -37,6 +37,32 @@
     display: inline-block; 
 }
 
+.cart-container {
+    float: right;
+    // text-align: center;
+    padding-left: 15px; 
+    width: 100px; 
+    border-left: 1px solid #eee;
+}
+     
+    
+.cart-text{
+    font-size: 12px;
+    color: #595955;
+    display: inline-block;
+    position: relative; 
+    right: 25px; 
+    
+}
+
+.cart-icon {
+    color: #666666;
+    width: 30px;
+    height: 100%;
+    display: inline-block;
+    margin-bottom: 15px; 
+}
+
 
 
 
