@@ -80,6 +80,51 @@
                 color: #222222; 
             }
 
+            .item-total{
+                font-size: 14px;
+                color: #222222;
+                display: flex; 
+                font-family: 'Open Sans', sans-serif;
+                justify-content: space-between;
+                padding: 8px 0 0;
+        
+            }
+
+            .shipping{
+                font-size: 14px;
+                color: #222222;
+                padding: 8px 0 8px 0;
+                display: flex; 
+                font-family: 'Open Sans', sans-serif;
+                justify-content: space-between;
+                
+            }
+
+            .subtotal{
+                font-size: 14px; 
+                height: 16px; 
+                color: #222222;
+                font-weight: 550;
+                justify-content: space-between;
+                display: flex; 
+                border-top: 1px solid #E1E3DF;
+                padding: 8px 0 0;
+
+            }
+
+            button{
+                background-color: #222222;
+                color: #FFF;
+                margin: 50px 0 0;
+                padding: 12px 28px; 
+                height: 48px;
+                width: 100%; 
+                border-radius: 3px;
+                display: inline-block;
+                font-size: 14px; 
+                font-weight: 550; 
+
+            }
             
         }
 
@@ -124,6 +169,8 @@
 
             .remove-button {
                 font-size: 13px;
+                cursor: pointer;
+                
             }
         }
 

@@ -60,10 +60,18 @@ class ShoppingCartIndex extends React.Component{
                             </label>
                         </div>
 
-                        <div>
-                            <h3>Item(s) total</h3> <span>${this.totalAmount()}</span>
-                            <h3>Shipping</h3> <span>Free</span>
+                        <div className='item-total'>
+                            <span>Item(s) total</span><span>${this.totalAmount()}</span>
                         </div>
+                        <div className='shipping'>
+                            <span>Shipping</span><span>Free</span>
+                        </div>
+
+                        <div className='subtotal'>
+                            <span>Subtotal</span><span>${this.totalAmount()}</span>
+                            
+                        </div>
+            
 
                         <button>Proceed to checkout</button>
                     </div>     
