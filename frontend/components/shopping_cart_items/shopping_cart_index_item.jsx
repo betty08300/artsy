@@ -28,31 +28,49 @@ class ShoppingCartIndexItem extends React.Component{
     render(){
         const {item} = this.props;
         return(
-            <div>
-                <div>
-                    <Link to={`/products/${item.product_id}`}></Link>
-                    <img src={item.images[0]} />
-                    <h2>{item.title}</h2>
+            <div className='item'>
+                <div className='left-col'>
+                    <Link to={`/products/${item.product_id}`} className='img-link'>
+                        <img src={item.images[0]} />
+                    </Link>
+                    
+                    <div className='item-details'>
+                        <Link to={`/products/${item.product_id}`}>
+                            <h2>{item.title}</h2>
+                        </Link>
+                        <div className='remove-button' onClick={this.props.deleteProduct.bind(this, item.id)} >Remove
+                            <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"></link>
+                        </div>
+                    </div>
+
+                    <label className='gift'>
+                        <input type='checkbox' className='gift-input-box' />
+                        <span className='gift-order'>This order is a gift</span>
+                        <div>
+                            <h6>Prices will not be shown on packing slip</h6>
+                        </div>
+                    </label>
+
                 </div>
 
-                <button onClick={this.props.deleteProduct.bind(this, item.id)}>Remove</button>
-                <select onChange={this.update('quantity')} name="quantity" value={this.state.quantity}>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                <div>
-                    <h3>${this.totalPrice()}</h3>
-                    <h6>(${(item.price).toFixed(2)} each)</h6>
+                <div className='right-col'>
+                    <select onChange={this.update('quantity')} name="quantity" value={this.state.quantity}>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <div className='price'>
+                        <h3>${this.totalPrice()}</h3>
+                        <h6>(${(item.price).toFixed(2)} each)</h6>
+                    </div>
                 </div>
-
             </div>
 
 

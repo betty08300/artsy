@@ -1,0 +1,150 @@
+.cart-index {
+    padding: 18px;
+
+    h1 {
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    .cart-container {
+        border: 1px solid #E1E3DF;
+        background: #FFF;
+        border-radius: 3px;
+        margin: 12px 0 12px;
+        padding: 18px;
+        width: 100%;
+
+        .left-col {
+            width: percentage(2/3);
+
+            &.right-border {
+                border-right: 1px solid #E1E3DF;
+            }
+            
+        }
+        .right-col {
+            width: percentage(1/3);
+        }
+
+        
+    }
+
+    
+
+}
+
+
+.item{
+    padding: 20px 0px 30px 0px;
+    width: 100%;
+    display: flex;
+    border-top: 1px solid #E1E3DF;
+    
+
+    
+ 
+    .left-col{
+
+        width: percentage(2/3);
+        display: flex;
+
+        .img-link {
+            width: percentage(2/5);
+            padding-right: 12px;
+        }
+
+        .item-details {
+            width: percentage(3/5);
+            font-weight: 300;
+
+            h2 {
+                margin-bottom: 12px;
+            }
+
+            a {
+                color: #222222;
+            }
+
+            .remove-button {
+                font-size: 13px;
+            }
+        }
+
+        img {
+            border-radius: 3px;
+            border: 1px solid #E1E3DF;
+            display: inline-block;
+            width: 100%;
+            object-fit: cover;
+            padding: 0px;
+        }
+
+        .gift{
+        
+            width: percentage(2/5);
+            padding-right: 12px;
+
+            
+            .gift-input-box{
+                display: inline-block;
+                height: 16px;
+                position: relative;
+                width: 16px; 
+            }
+
+            .gift-order{
+                font-size: 14px;
+                line-height: 1.4;
+                color: #222222;
+                display: inline-block;
+
+            }
+
+            h6{
+                font-size: 12px;
+                color: #595959;
+                
+            }
+        }
+
+    }
+
+    .right-col {
+        width: percentage(1/3);
+        display: inline-block;
+        display: flex;
+        
+
+        select{
+            text-align: start;
+            align-items: center;
+            font-size: 14px; 
+            height: 38px;
+            width: percentage(1/3); 
+            display: inline-block; 
+        }
+
+        .price {
+            width: percentage(2/3);
+        }
+
+        h3{
+           font-size: 14px; 
+           color: #222222;
+           font-weight: 550;
+           text-align: right; 
+        }
+        h6{
+            font-size: 12px; 
+            display: block;
+            color: #595959;
+            text-align: right;
+            line-height: 1.4; 
+
+        }
+    }
+
+
+
+}
