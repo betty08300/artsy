@@ -1,6 +1,6 @@
 class Api::ShoppingCartItemsController < ApplicationController 
-    # before_action :require_login
-    # todo: undo this
+    before_action :require_login
+
 
     def index 
         @shopping_cart_items = ShoppingCartItem.where(user_id: params[:user_id])
