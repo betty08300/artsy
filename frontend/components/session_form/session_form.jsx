@@ -32,8 +32,8 @@ class SessionForm extends React.Component {
     handleClick(e){
         e.preventDefault();
         const demo = {
-            email: 'betty2019@gmail.com',
-            password: 'betty2019'
+            email: 'betty@gmail.com',
+            password: '123456'
         }
         this.props.loginDemoUser(demo).then(()=>{
             this.props.closeModal()

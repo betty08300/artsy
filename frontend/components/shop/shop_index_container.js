@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import ShopIndex from './shop_index';
 
 const msp = (state, ownProps) => ({
-    userId: ownProps.userId,
+    userId: state.session.id,
     products: Object.keys(state.entities.products).map(id => state.entities.products[id])
 });
 
