@@ -6,6 +6,8 @@ class ProductForm extends React.Component{
     constructor(props){
         super(props);
         this.state = this.props.product; 
+        this.state.imgUrls = this.props.product.images;
+
         this.handleFile = this.handleFile.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -39,10 +41,24 @@ class ProductForm extends React.Component{
     }
 
     handleFile(e) {
+        // update state for the form
         this.setState({
             images: e.currentTarget.files,
             fileUploaded: true
         });
+
+        // update imgurls in state for thumbnails
+        let files = Array.from(e.target.files);
+        files.forEach(file => {
+            let reader = new FileReader();
+            reader.onload= (e) => {
+                let imgUrl = e.target.result;
+                this.setState({
+                    imgUrls: [...this.state.imgUrls, imgUrl]
+                });
+            }
+            reader.readAsDataURL(file);
+        })
     }
 
     handleSubmit(e) {
@@ -79,6 +95,10 @@ class ProductForm extends React.Component{
     }
 
     render(){
+        let photos = this.state.imgUrls.map(imgUrl => {
+            return <img src={imgUrl} />
+        });
+
         return(
             <div>
                 <form className='product-form' onSubmit={this.handleSubmit}>
@@ -92,20 +112,22 @@ class ProductForm extends React.Component{
                                 <p>Use up to ten photos to show your item's most important qualities.</p>
                             </div>
                             <div className='right-col'>
-                                <div className='image-upload'>
-                                    <div className='image-button'>
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBNuizqdv7ZS4DkHbt65u1QNOwZeo4PQ7kDI_UPgXvzzqgcsX6ug" />
-                                        <p>Add a photo</p>
+                                <div className='image-upload-container'>
+                                    <div className='image-upload'>
+                                        <div className='image-button'>
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBNuizqdv7ZS4DkHbt65u1QNOwZeo4PQ7kDI_UPgXvzzqgcsX6ug" />
+                                            <p>Add a photo</p>
+                                        </div>
+                                        <input type="file" onChange={this.handleFile} multiple />
                                     </div>
-                                    <input type="file" onChange={this.handleFile} multiple />
+                                    {photos}
                                 </div>
-                                
                                 
                             </div>
                         </div>
                     </div>
                     
-                    <div class='form-section'>
+                    <div className='form-section'>
                         <h2>Listing details</h2>
                         <div className='row'>
                             <div className='left-col'>

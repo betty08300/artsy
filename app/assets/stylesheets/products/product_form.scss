@@ -128,9 +128,24 @@
         margin-bottom: 24px;
     }
 
+    .image-upload-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        >img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
     .image-upload {
         width: 100px;
         height: 100px;
+        margin-right: 10px;
+        margin-bottom: 10px;
         position: relative;
         border-radius: 3px;
         border: 1px solid #E1E3DF;
@@ -155,6 +170,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            margin: 0px;
         }
         img {
             height: 30%;
