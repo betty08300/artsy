@@ -1,8 +1,8 @@
 .cart-index {
-    padding: 18px;
+    padding: 25px;
 
     h1 {
-        font-size: 26px;
+        font-size: 18px;
         font-weight: 500;
         line-height: 1.2;
     }
@@ -16,7 +16,7 @@
         width: 100%;
 
         .left-col {
-            width: percentage(2/3);
+            width: percentage(3/4);
 
             &.right-border {
                 border-right: 1px solid #E1E3DF;
@@ -24,7 +24,63 @@
             
         }
         .right-col {
-            width: percentage(1/3);
+            width: percentage(1/4);
+            padding-left: 20px; 
+
+            .credit-card{
+                margin: 0 0 6px;
+                position: relative;
+                display: flex; 
+                
+
+                input{
+                    display: inline-block;
+                    height: 16px;
+                    position: relative;
+                    width: 16px; 
+            
+                }
+                
+
+
+                .credit-card-img {   
+                    display: inline-block; 
+     
+             
+
+                    img{
+                        height: 24px; 
+                        width: 36px; 
+                        border: 1px solid #E1E3DF;
+                        margin-left: 5px; 
+                       
+                    }
+                   
+        
+                    
+                }
+
+                .paypal-icon{
+                    display: inline-block;
+
+                    img{
+                        height: 24px; 
+                        width: 36px; 
+                        border: 1px solid #E1E3DF;
+                        margin-left: 5px; 
+                    }
+                }
+
+
+            }
+
+            h2{
+                font-size: 14px; 
+                font-weight: 550;
+                color: #222222; 
+            }
+
+            
         }
 
         

@@ -42,14 +42,21 @@ class ShoppingCartIndex extends React.Component{
                     <div className='right-col'>
                         <div>
                             <h2>How you'll pay</h2>
-                            <label>
+                            <label className='credit-card'>
                                 <input type='radio' name='payment' value='visa' defaultChecked />
-                                {/* <img src="" alt=""/> */}
+                                <div className='credit-card-img'>
+                                    <img src="https://image.flaticon.com/icons/svg/196/196578.svg" />
+                                    <img src='https://image.flaticon.com/icons/svg/196/196561.svg' />
+                                    <img src='https://image.flaticon.com/icons/svg/349/349228.svg' />
+                                    <img src='https://image.flaticon.com/icons/svg/217/217426.svg' />
+                                </div>
                             </label>
 
-                            <label>
+                            <label className='credit-card'>
                                 <input type='radio' name='payment' value='paypal' />
-                                {/* <img src="" alt=""/> */}
+                                <div className='paypal-icon'>
+                                    <img src="https://image.flaticon.com/icons/svg/888/888870.svg"/>
+                                </div>
                             </label>
                         </div>
 
