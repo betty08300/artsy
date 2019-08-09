@@ -27,3 +27,45 @@ artsy, an etsy clone, is a marketplace for handmade goods.
 
 ### Shopping Cart 
 <a href="https://ibb.co/8NXfcnp"><img src="https://i.ibb.co/17bP6Y5/cart.png" alt="cart" border="0"></a><br /><a target='_blank' href='https://babynamesetc.com/rhyming'></a><br />
+
+### Key Feature: Image Uploads
+
+```javascript
+class ProductForm extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = this.props.product; 
+        this.state.imgUrls = this.props.product.images;
+
+        this.handleFile = this.handleFile.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+      handleFile(e) {
+        // update state for the form
+        this.setState({
+            images: e.currentTarget.files,
+            fileUploaded: true
+        });
+
+        // update imgurls in state for thumbnails
+        let files = Array.from(e.target.files);
+        files.forEach(file => {
+            let reader = new FileReader();
+            reader.onload= (e) => {
+                let imgUrl = e.target.result;
+                this.setState({
+                    imgUrls: [...this.state.imgUrls, imgUrl]
+                });
+            }
+            reader.readAsDataURL(file);
+        })
+    }    
+}
+```
+
+## Future Impplementations
+
+* Comments/Reviews: Users can leave reviews and start rating 
+* Search bar: Users are be able to search products 
+
+
