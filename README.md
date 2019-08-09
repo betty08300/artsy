@@ -1,25 +1,26 @@
-# README
+# Artsy
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+artsy, an etsy clone, is a marketplace for handmade goods.
 
-Things you may want to cover:
+## Live 
+[Artsy](https://artsy-aa.herokuapp.com/#/)
 
-* Ruby version
+## Features 
 
-* System dependencies
+* Session: Secure backend to frontend User Authentication using BCrypt 
 
-* Configuration
+* Products: Shop manager allows users to add/ edit their product listing and upload product images.
 
-* Database creation
+* Shopping Cart: User can add products to their shopping cart. The item quantity and prices will be automatically update.
 
-* Database initialization
+## Technologies 
 
-* How to run the test suite
+* Ruby on Rails
+* React
+* Redux 
+* JBuilder
+* Postgresql
+* AWS 
+* Heroku 
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
-# artsy
