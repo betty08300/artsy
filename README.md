@@ -1,6 +1,7 @@
 # Artsy
 
 artsy, an etsy clone, is a marketplace for handmade goods.
+
 [Live](https://artsy-aa.herokuapp.com/#/)
 
 ## Features 
