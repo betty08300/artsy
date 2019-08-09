@@ -59,7 +59,44 @@ class ProductForm extends React.Component{
             }
             reader.readAsDataURL(file);
         })
-    }    
+    }
+    render(){
+        let photos = this.state.imgUrls.map(imgUrl => {
+            return <img src={imgUrl} />
+        });
+
+        return(
+            <div>
+                <form className='product-form' onSubmit={this.handleSubmit}>
+                    <h1>Add a new listing</h1>
+                    <div className='form-section'>
+                        <div className='row'>
+                            <div className='left-col'>
+                                <h2>Photos</h2>
+                                <p>Add as many as you can so buyers can see every detail.</p>
+                                <label>Photos * </label>
+                                <p>Use up to ten photos to show your item's most important qualities.</p>
+                            </div>
+                            <div className='right-col'>
+                                <div className='image-upload-container'>
+                                    <div className='image-upload'>
+                                        <div className='image-button'>
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBNuizqdv7ZS4DkHbt65u1QNOwZeo4PQ7kDI_UPgXvzzqgcsX6ug" />
+                                            <p>Add a photo</p>
+                                        </div>
+                                        <input type="file" onChange={this.handleFile} multiple />
+                                    </div>
+                                    {photos}
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>    
+                </form>
+            </div>
+        )
+    }
+
 }
 ```
 
