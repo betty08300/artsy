@@ -56,7 +56,7 @@ class ProductShow extends React.Component{
                         <p className='item-details'>{product.description}</p>
                     </div>
 
-                    <div>
+                    <div className='add-to-cart'>
                         {this.props.userId &&
                             <button onClick={this.addToCart}> Add to cart</button>   
                         }

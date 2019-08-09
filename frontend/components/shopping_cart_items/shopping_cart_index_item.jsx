@@ -5,10 +5,11 @@ class ShoppingCartIndexItem extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            // id: this.props.item.id,
+            id: this.props.item.id,
             quantity: this.props.item.quantity,
             // price: this.props.item.price || 0
         }
+        this.state.item = this.props.item;
     
 
     }
@@ -21,28 +22,31 @@ class ShoppingCartIndexItem extends React.Component{
 
     update(field){
         return(e) => {
-            this.setState({[field]: e.target.value})
+            this.setState({[field]: e.target.value}, () => {
+                this.props.updateShoppingCartItem(this.state);
+            });
         }
     }
 
     render(){
-        const {item} = this.props;
+        const {item} = this.state;
         return(
             <div className='item'>
                 <div className='left-col'>
-                    <Link to={`/products/${item.product_id}`} className='img-link'>
-                        <img src={item.images[0]} />
-                    </Link>
-                    
-                    <div className='item-details'>
-                        <Link to={`/products/${item.product_id}`}>
-                            <h2>{item.title}</h2>
+                    <div className='item-img-and-info'>
+                        <Link to={`/products/${item.product_id}`} className='img-link'>
+                            <img src={item.images[0]} />
                         </Link>
-                        <div className='remove-button' onClick={this.props.deleteProduct.bind(this, item.id)} >Remove
+
+                        <div className='item-details'>
+                            <Link to={`/products/${item.product_id}`}>
+                                <h2>{item.title}</h2>
+                            </Link>
+                            <div className='remove-button' onClick={this.props.deleteProduct.bind(this, item.id)} >Remove
                             <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"></link>
+                            </div>
                         </div>
                     </div>
-
                     <label className='gift'>
                         <input type='checkbox' className='gift-input-box' />
                         <span className='gift-order'>This order is a gift</span>

@@ -27,7 +27,7 @@ class Api::ShoppingCartItemsController < ApplicationController
 
     def update 
         @shopping_cart_item = ShoppingCartItem.find(params[:id])
-        if @shopping_cart_item.update_attribute(shopping_cart_item_params)
+        if @shopping_cart_item.update(shopping_cart_item_params)
             render :show 
         else 
             render json:  @shopping_cart_item.errors.full_messages, status: 422

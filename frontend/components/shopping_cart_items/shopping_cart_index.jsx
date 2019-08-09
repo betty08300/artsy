@@ -11,6 +11,10 @@ class ShoppingCartIndex extends React.Component{
         this.props.fetchAllShoppingCartItems(this.props.user_id);
         document.body.style = 'background: #FAF9F5';
     }
+
+    componentWillUnmount() {
+        document.body.style = 'background: #FFFFFF';
+    }
     
     totalQty(){
         return this.props.items.length; 
@@ -33,7 +37,7 @@ class ShoppingCartIndex extends React.Component{
                     <div className='left-col right-border'>
                         <ul>
                             {this.props.items.map((item) => (
-                                <ShoppingCartIndexItem deleteProduct={this.props.deleteShoppingCartItem} item={item} key={item.id} />
+                                <ShoppingCartIndexItem deleteProduct={this.props.deleteShoppingCartItem} updateShoppingCartItem={this.props.updateShoppingCartItem} item={item} key={item.id} />
                             )
                             )}
                         </ul>

@@ -9,10 +9,10 @@ import {
 const shoppingCartItemsReducer = (state={}, action) => {
     switch(action.type){
         case RECEIVE_SHOPPING_CART_ITEM:
-            return merge({}, {[action.shoppingCartItem.id]: action.shoppingCartItem});
+            return merge({}, state, {[action.shoppingCartItem.id]: action.shoppingCartItem});
 
         case RECEIVE_ALL_SHOPPING_CART_ITEMS:
-            return merge({}, action.shoppingCartItems);
+            return merge({}, state, action.shoppingCartItems);
 
         case REMOVE_SHOPPING_CART_ITEM: 
             let newState = merge({}, state);

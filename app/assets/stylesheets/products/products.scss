@@ -55,12 +55,14 @@
 
 .product-container {
     padding-top: 30px;
+    max-width: 1272px;
+    margin: 0 auto;
 }
 
 .left-col {
     float: left;
     width: percentage(2/3);
-    padding-right: 12px;
+    padding-right: 22px;
 
     .product-img-full {
         max-width: 100%;
@@ -123,6 +125,25 @@
         text-align: left;
         line-height: 1.5em;
         margin-bottom: 20px;
+
+    }
+
+    .add-to-cart{
+
+        button{
+
+            background-color: #222222;
+            color: #FFF;
+            margin: 50px 0 0;
+            padding: 12px 28px; 
+            height: 48px;
+            width: 100%; 
+            border-radius: 3px;
+            display: inline-block;
+            font-size: 16px; 
+            font-weight: 550; 
+
+        }
 
     }
 
