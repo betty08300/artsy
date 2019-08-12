@@ -26,7 +26,7 @@ class Api::ProductsController < ApplicationController
 
     def update
         @product = Product.find(params[:id])
-        puts @product
+        # puts @product
         if @product.update(product_params)
             render 'api/products/show'
         else 
