@@ -26,7 +26,9 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :ShoppingCartItem
         
-        
+    has_many :comments,
+        foreign_key: :user_id,
+        class_name: :Comment     
 
 
     after_initialize :ensure_session_token

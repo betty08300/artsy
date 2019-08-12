@@ -27,5 +27,9 @@ class Product < ApplicationRecord
     has_many :shopping_cart_items,
         foreign_key: :product_id,
         class_name: :ShoppingCartItem 
+
+    has_many :comments, 
+        foreign_key: :product_id,
+        class_name: :Comment 
         
 end
