@@ -102,7 +102,12 @@ class ProductForm extends React.Component{
         return(
             <div>
                 <form className='product-form' onSubmit={this.handleSubmit}>
-                    <h1>Add a new listing</h1>
+                    {this.props.formType === 'create' &&
+                        <h1>Add a new listing</h1>
+                    }
+                    {this.props.formType === 'update' &&
+                        <h1>Update your listing</h1>
+                    }
                     <div className='form-section'>
                         <div className='row'>
                             <div className='left-col'>
@@ -215,4 +220,4 @@ class ProductForm extends React.Component{
 
 }
 
-export default withRouter(ProductForm); 
+export default withRouter(ProductForm);

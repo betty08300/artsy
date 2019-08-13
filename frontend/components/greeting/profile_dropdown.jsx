@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'; 
 import { logout } from '../../actions/session_actions';
+import { withRouter } from 'react-router-dom';
 
 const msp = state => {
     return {
@@ -34,7 +35,9 @@ class Profile extends React.Component{
 
     handleClick(e){
         e.preventDefault()
-        this.props.logout() 
+        this.props.logout().then(()=>{
+            this.props.history.push('/')
+        }) 
     }
 
     render(){
@@ -79,4 +82,4 @@ class Profile extends React.Component{
 
 }
 
-export default connect(msp, mdp)(Profile); 
+export default withRouter(connect(msp, mdp)(Profile)); 
