@@ -24,6 +24,7 @@ class Api::CommentsController < ApplicationController
             render :show
         else 
             render json: @comment.errors.full_messages, status: 422
+        end 
     end 
 
     def destroy
@@ -36,7 +37,7 @@ class Api::CommentsController < ApplicationController
     end 
 
     private
-     
+
     def comment_params
         parans.require(:comment).permit(:user_id, :product_id, :body, :rating)
     end 

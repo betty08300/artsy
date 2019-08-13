@@ -9,8 +9,10 @@ const CommentIndexItem = ({ comment })=> {
             <Rating
                 emptySymbol='far fa-star'
                 fullSymbol='far fa-star'
+                initialRating={review.rating}
+                readonly={true}
             />
-            <div>{comment.bidy}</div>
+            <div>{comment.body}</div>
         </div>
     )
 }

@@ -34,6 +34,7 @@ export const receiveCommentErrors = (errors) => {
 }
 
 export const fetchAllComments = (productId) => dispatch => {
+    console.log('action: ' + productId)
     return CommentAPIUtil.fetchAllComments(productId).then((comments)=>{
         return dispatch(receiveAllComments(comments))
     }, errors => {

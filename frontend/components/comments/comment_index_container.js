@@ -4,9 +4,9 @@ import CommentIndex from './comment_index';
 
 const msp = (state, ownProps) => {
     return {
-        comments: Object.key(state.entities.comments).map(id => state.entities.comments[id]),
+        comments: Object.keys(state.entities.comments).map(id => state.entities.comments[id]),
         user_id: state.session.id,
-        product_id: state.entities.products.id
+        product_id: ownProps.product_id
     }
 
 }

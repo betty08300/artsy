@@ -1,3 +1,4 @@
+import merge from 'lodash/merge';
 import { 
     RECEIVE_ALL_COMMENTS, 
     RECEIVE_COMMENT, REMOVE_COMMENT, 

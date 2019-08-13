@@ -1,7 +1,8 @@
 export const fetchAllComments = (productId) => {
+    console.log('api util: ' + productId);
     return $.ajax({
         method: 'GET',
-        url: 'api/products/${productId}/comments',
+        url: `api/products/${productId}/comments`,
         data: {productId}
     })
 }

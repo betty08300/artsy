@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Gallery from './gallery'
+import CommentIndexContainer from '../comments/comment_index_container'
 
 class ProductShow extends React.Component{
     constructor(props){
@@ -32,6 +33,10 @@ class ProductShow extends React.Component{
     render(){
        
         const {product} = this.props;
+        console.log('product show: ' + product.id)
+        if (!product.id) {
+            return <div>Loading...</div>;
+        }
 
         return(
             
@@ -39,6 +44,7 @@ class ProductShow extends React.Component{
                 <div className="left-col">
                     {/* <img className='product-img-full' src={product.images[0]}/> */}
                     <Gallery images={product.images} />
+                    <CommentIndexContainer product_id={product.id}/>
                 </div>
                 <div className="right-col">
                     <div>

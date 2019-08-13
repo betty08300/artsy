@@ -10,7 +10,8 @@ class CommentIndex extends React.Component{
     }
 
     componentDidMount(){
-        this.props.fetchAllComments(this.props.comments)
+        console.log(this.props.product_id);
+        this.props.fetchAllComments(this.props.product_id);
     }
 
 
@@ -19,16 +20,18 @@ class CommentIndex extends React.Component{
         this.props.comments.forEach((comment)=> {
             sum += comment.rating 
         });
-        return (sun/ this.props.comments.length);
+        return (sum/ this.props.comments.length);
     }
 
-    renderRating() {
+    renderAverageRating() {
         return (
             <div>
                 <Rating
                     className="review-index-rating"
                     emptySymbol="far fa-star"
-                    fullSymbol="fas fa-star"/>
+                    fullSymbol="fas fa-star"
+                    initialRating={this.avgRating()}
+                    readonly={true}/>
             </div>
         )
     }
@@ -39,6 +42,12 @@ class CommentIndex extends React.Component{
               <CommentIndexItem key={comment.id} comment={comment}/>
           )
       })
+      return (
+          <div>
+              <h3>Comments</h3>
+              { comments }
+          </div>
+      )
 
         
     }
