@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 Product.destroy_all
+Comment.destroy_all
 
 img_path = './app/assets/images/seeds/'
 
@@ -31,7 +32,7 @@ p4.images.attach(io: File.open(img_path + 'backpack_1.jpg'), filename: 'backpack
 p4.images.attach(io: File.open(img_path + 'backpack_2.jpg'), filename: 'backpack_2.jpg')
 p4.images.attach(io: File.open(img_path + 'backpack_3.jpg'), filename: 'backpack_3.jpg')
 
-p5 = Product.create(title: 'Baptism Gift, Christening Gift, Elephant Keepsake, Stuffed Elephant, Godparent Gift, ', description: '♥ This adorable personalized plush elephant is the perfect Baptism/Christening keepsake.
+p5 = Product.create(title: 'Baptism Gift, Christening Gift, Elephant Keepsake, Stuffed Elephant, Godparent Gift ', description: '♥ This adorable personalized plush elephant is the perfect Baptism/Christening keepsake.
 ♥ The elephant is personalized using high quality heat-transfer vinyl that is applied using a commercial grade heat press. You can be confident that the letters and numbers will not come off!', price: 16.00, user_id: betsy.id, who: 'A member of my shop', what: 'A finished product', when: 'Made to order')
 p5.images.attach(io: File.open(img_path + 'baptism_gift.jpg'), filename: 'baptism_gift.jpg')
 
@@ -58,6 +59,24 @@ p11.images.attach(io: File.open(img_path + 'champagne_glasses2.jpg'), filename: 
 
 p12 = Product.create(title: 'Personalized Cutting Board', description: 'Personalized Cutting Boards, Custom Engraved Chopping Boards, Custom Engraved Cooking Boards for Weddings, Anniversaries, and Housewarming Gifts made to order.', price: 26.95 , user_id: betsy.id, who: 'I did', what: 'A finished product', when: 'Made to order')
 p12.images.attach(io: File.open(img_path + 'cutting_board.jpg'), filename: 'cutting_board.jpg')
+
+
+c1 = Comment.create(user_id: betty.id, product_id: p1.id, body:'items arrived very quickly after purchasing and they are going to be a hit! LOVE THEM', rating:5)
+c2 = Comment.create(user_id: bob.id, product_id: p1.id, body:'Very cute coozies for baby shower! Color was actually lighter than the photo but still worked out great.', rating:4)
+c3 = Comment.create(user_id: betty.id, product_id: p2.id, body:'Shipping was super fast, and it came packaged nicely. The onesie looks just like it does in the photos', rating:5)
+c4 = Comment.create(user_id: bob.id, product_id: p3.id, body: 'adorable , well made, and so soft! Will definitely buy from here again!', rating:4)
+c5 = Comment.create(user_id: betsy.id, product_id: p3.id, body:'Fast delivery! Love the colors and sparkle of letters.', rating:5)
+c6 = Comment.create(user_id: betty.id, product_id: p4.id, body:'The bagpack is smaller than what I expected.', rating:3)
+c7 = Comment.create(user_id: betsy.id, product_id: p5.id, body:'Amazing! The precious box and the customer service!!!', rating:4)
+c8 = Comment.create(user_id: bob.id, product_id: p6.id, body:'The sound quality is not that good, but the design is cute.', rating:3)
+c9 = Comment.create(user_id: betty.id, product_id: p6.id, body:'Shipping was fast. Love the product.', rating:4)
+c10 = Comment.create(user_id: betty.id, product_id: p7.id, body:'Working with the seller was so great. She was pleasant and made sure I got these in time for my wedding day. The jars are beautiful!', rating:4)
+c11 = Comment.create(user_id: betty.id, product_id: p8.id, body:'Wonderful bracelet and great service!', rating:4)
+c12 = Comment.create(user_id: betsy.id, product_id: p8.id, body:'Delicate but durable, but shipping is too slow!', rating:2)
+c13 = Comment.create(user_id: betty.id, product_id: p9.id, body:'These are adorable I got the bags for mother/mother in love, bridesmaids and flower girls to put their gifts in and they are awesome bags. Great quality and so cute! They shipped quickly and were no hassle.', rating:3)
+c14 = Comment.create(user_id: bob.id, product_id: p10.id, body:'Love them!!!! Can not wait to give them to my girls! They were so cute I had to get myself one', rating:5)
+c15 = Comment.create(user_id: betty.id, product_id: p11.id, body:'Absolutely gorgeous! Ordered as a gift but might have to reorder for myself!', rating:3)
+
 
 
 
