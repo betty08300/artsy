@@ -4,14 +4,17 @@ import Rating from 'react-rating';
 
 const CommentIndexItem = ({ comment })=> {
     return (
+        
         <div>
             <h2>{comment.user}</h2>
             <Rating
                 emptySymbol='far fa-star'
                 fullSymbol='far fa-star'
-                initialRating={review.rating}
+                initialRating={comment.rating}
                 readonly={true}
+                
             />
+            <h3>{comment.rating}</h3>
             <div>{comment.body}</div>
         </div>
     )
