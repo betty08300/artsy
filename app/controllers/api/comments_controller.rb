@@ -2,6 +2,8 @@ class Api::CommentsController < ApplicationController
     def index
         if params[:user_id]
             @comments = Comment.where(user_id: params[:user_id])
+        elsif params[:product_id]
+            @comments = Comment.where(product_id: params[:product_id])
         else 
             @comments = Comment.all 
         end 

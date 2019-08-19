@@ -3,8 +3,8 @@ import { withRouter } from 'react-router-dom';
 import Rating from 'react-rating'; 
 
 const CommentIndexItem = ({ comment })=> {
+
     return (
-        
         <div>
             <h2>{comment.user}</h2>
             <Rating
