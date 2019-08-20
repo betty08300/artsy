@@ -2,7 +2,6 @@ import React from 'react';
 import Rating from 'react-rating';
 import withRouter from 'react-router-dom';
 import CommentIndexItem from './comment_index_item';
-// import 'font-awesome/css/font-awesome.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar as solidStar } from '@fortawesome/free-solid-svg-icons'
 import { faStar as regularStar } from '@fortawesome/free-regular-svg-icons'
@@ -29,13 +28,14 @@ class CommentIndex extends React.Component{
 
     renderAverageRating() {
         return (
-            <div>
+            <div className='avg-rating'>
                 <Rating
                     className="review-index-rating"
                     emptySymbol={<FontAwesomeIcon icon={regularStar} />}
                     fullSymbol={<FontAwesomeIcon icon={solidStar} />}
                     initialRating={this.avgRating()}
                     readonly={true}/>
+                <p> ({this.props.comments.length})</p>
             </div>
         )
     }
@@ -48,7 +48,8 @@ class CommentIndex extends React.Component{
       })
       return (
           <div>
-              <h3>Comments</h3>
+              <h3>Reviews</h3>
+              { this.renderAverageRating() }
               { comments }
           </div>
       )

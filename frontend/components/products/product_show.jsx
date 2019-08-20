@@ -45,8 +45,8 @@ class ProductShow extends React.Component{
                 <div className="left-col">
                     {/* <img className='product-img-full' src={product.images[0]}/> */}
                     <Gallery images={product.images} />
-                    <CreateCommentContainer />
                     <CommentIndexContainer product_id={product.id}/>
+                    <CreateCommentContainer />
                 </div>
                 <div className="right-col">
                     <div>

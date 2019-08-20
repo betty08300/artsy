@@ -1,6 +1,5 @@
 import React from 'react';
 import Rating from 'react-rating';
-// import 'font-awesome/css/font-awesome.min.css'
 import { withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar as solidStar } from '@fortawesome/free-solid-svg-icons'
@@ -40,15 +39,16 @@ class CommentForm extends React.Component{
           <form onSubmit={this.handleSubmit}>
                 <div>
                     <h1>Write a Review</h1>
-                    <button><i className='fas fa-times'></i></button>
+                    
                     <Rating
                         emptySymbol={<FontAwesomeIcon icon={regularStar} />}
                         fullSymbol={<FontAwesomeIcon icon={solidStar} />}
                         initialRating={this.state.rating}
                         onChange={this.update('rating')}
                     />
-                    
-                    <textarea onChange={this.update('body')} value={this.state.body}></textarea>
+                    <div comment-text>
+                        <textarea onChange={this.update('body')} value={this.state.body}></textarea>
+                    </div>
                     <button>Save</button>
                 </div>
           </form>
