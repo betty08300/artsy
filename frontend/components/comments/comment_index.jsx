@@ -3,6 +3,9 @@ import Rating from 'react-rating';
 import withRouter from 'react-router-dom';
 import CommentIndexItem from './comment_index_item';
 // import 'font-awesome/css/font-awesome.min.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar as solidStar } from '@fortawesome/free-solid-svg-icons'
+import { faStar as regularStar } from '@fortawesome/free-regular-svg-icons'
 
 class CommentIndex extends React.Component{
     constructor(props){
@@ -29,8 +32,8 @@ class CommentIndex extends React.Component{
             <div>
                 <Rating
                     className="review-index-rating"
-                    emptySymbol="far fa-star"
-                    fullSymbol="fas fa-star"
+                    emptySymbol={<FontAwesomeIcon icon={regularStar} />}
+                    fullSymbol={<FontAwesomeIcon icon={solidStar} />}
                     initialRating={this.avgRating()}
                     readonly={true}/>
             </div>
