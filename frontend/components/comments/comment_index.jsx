@@ -2,6 +2,7 @@ import React from 'react';
 import Rating from 'react-rating';
 import withRouter from 'react-router-dom';
 import CommentIndexItem from './comment_index_item';
+// import 'font-awesome/css/font-awesome.min.css'
 
 class CommentIndex extends React.Component{
     constructor(props){

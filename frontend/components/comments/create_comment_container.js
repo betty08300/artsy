@@ -1,4 +1,5 @@
 import { createComment } from '../../actions/comment_actions';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import CommentForm from './comment_form';
 
@@ -20,8 +21,8 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => {
     return {
-        action: (comment) => dispatch(createComment(comment))
+        createComment: (comment) => dispatch(createComment(comment))
     }
 }
 
-export default connect(msp, mdp)(CommentForm); 
+export default withRouter(connect(msp, mdp)(CommentForm)); 

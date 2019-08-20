@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import Rating from 'react-rating'; 
+import Rating from 'react-rating';
+// import 'font-awesome/css/font-awesome.min.css' 
 
 const CommentIndexItem = ({ comment })=> {
 
@@ -12,9 +13,7 @@ const CommentIndexItem = ({ comment })=> {
                 fullSymbol='far fa-star'
                 initialRating={comment.rating}
                 readonly={true}
-                
             />
-            <h3>{comment.rating}</h3>
             <div>{comment.body}</div>
         </div>
     )
