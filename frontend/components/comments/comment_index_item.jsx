@@ -9,15 +9,16 @@ import { faStar as regularStar } from '@fortawesome/free-regular-svg-icons'
 const CommentIndexItem = ({ comment })=> {
 
     return (
-        <div>
+        <div className="comment">
             <h2>{comment.user}</h2>
             <Rating
+                className="rating"
                 emptySymbol={<FontAwesomeIcon icon={regularStar} />}
                 fullSymbol={<FontAwesomeIcon icon={solidStar} />}
                 initialRating={comment.rating}
                 readonly={true}
             />
-            <div>{comment.body}</div>
+            <p>{comment.body}</p>
         </div>
     )
 }

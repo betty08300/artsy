@@ -1,0 +1,46 @@
+.reviews-container {
+    border-top: 1px solid #eee; 
+    margin-top: 40px; 
+    padding: 20px 0; 
+}
+
+.reviews-title {
+    display: flex;
+
+    .avg-rating {
+        margin-left: 12px;
+    }
+}
+
+.comment {
+    padding: 15px 0;
+
+    h2 {
+        text-decoration: underline;
+        font-size: .9em;
+    }
+
+    p {
+        font-size: 14px;
+        color: #222;
+        font-weight: 400;
+    }
+
+    .rating {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+}
+
+.review-form {
+    h1 {
+        font-size: 100%;
+        font-weight: 400;
+        margin-bottom: 8px;
+    }
+    textarea {
+        width: 100%;
+        height: 150px;
+        margin-top: 8px;
+    }
+}

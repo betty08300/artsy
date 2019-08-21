@@ -37,7 +37,7 @@ class CommentForm extends React.Component{
         
         return(
           <form onSubmit={this.handleSubmit}>
-                <div>
+                <div className="review-form">
                     <h1>Write a Review</h1>
                     
                     <Rating
@@ -46,7 +46,7 @@ class CommentForm extends React.Component{
                         initialRating={this.state.rating}
                         onChange={this.update('rating')}
                     />
-                    <div comment-text>
+                    <div>
                         <textarea onChange={this.update('body')} value={this.state.body}></textarea>
                     </div>
                     <button>Save</button>

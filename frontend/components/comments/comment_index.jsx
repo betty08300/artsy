@@ -47,9 +47,11 @@ class CommentIndex extends React.Component{
           )
       })
       return (
-          <div>
-              <h3>Reviews</h3>
-              { this.renderAverageRating() }
+          <div className='reviews-container'>
+              <div className="reviews-title">
+                  <h3>Reviews</h3>
+                  {this.renderAverageRating()}
+              </div>
               { comments }
           </div>
       )
