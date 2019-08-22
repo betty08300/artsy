@@ -2,6 +2,9 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ProductsIndexItem from './products_index_item';
 import { Link } from 'react-router-dom';
+import Fade from './landing_carousel';
+
+
 
 class ProductIndex extends React.Component{
    componentDidMount(){
@@ -13,6 +16,10 @@ class ProductIndex extends React.Component{
     render() {
         return (
             <div className='recently-add-products'>
+                <div className='left-banner'>
+                   
+                    <Fade/>
+                </div>
                 <div className='recently-add'>Recently Added</div>
                 <div className='products-grid'>
                     {this.props.products.map(product => {
