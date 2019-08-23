@@ -13,7 +13,9 @@ export default class Fade extends Component {
         };
         return (
             <div className='banners-container'>
-                <h1>If it's handcrafted, vintage, custom, or unique, it's on Artsy.</h1>
+                <div className='banner-title'>
+                    <h1>If it's handcrafted, vintage, custom, or unique, it's on Artsy.</h1>
+                </div>
                 <Slider {...settings}>
                     <div>
                         <img src="https://i.ytimg.com/vi/K59404x4D5w/maxresdefault.jpg" alt=""/>

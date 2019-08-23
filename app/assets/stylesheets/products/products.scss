@@ -197,9 +197,16 @@
 
 .banners-container {
      display: flex;
+
+     .banner-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #E9ECFF;
+     }
      
      .slick-slider{
-         width: 80%;
+         width: 75%;
      }
 
      .slick-prev {
@@ -215,9 +222,10 @@
     }
 
     h1 {
-        display: inline-block; 
-        height: 380px; 
-        width: 20%;
-        background: #E9ECFF;
+        text-align: center;
+        font-size: 1.5em;
+        width: 80%;
+        line-height: 1.35;
+        
     }
 }
