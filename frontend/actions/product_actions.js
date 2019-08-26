@@ -4,7 +4,7 @@ export const RECEIVE_ALL_PRODUCTS = 'RECEIVE_ALL_PRODUCTS';
 export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 export const REMOVE_PRODUCT = 'REMOVE_PRODUCT'
 export const RECEIVE_PRODUCT_ERRORS = 'RECEIVE_PRODUCT_ERRORS';
-
+export const RECEIVE_PRODUCT_SEARCH = 'RECEIVE_PRODUCT_SEARCH';
 
 export const receiveAllProducts = products =>({
     type: RECEIVE_ALL_PRODUCTS,
@@ -24,6 +24,11 @@ export const removeProduct = id => ({
 export const receiveProductErrors = errors => ({
     type: RECEIVE_PRODUCT_ERRORS,
     errors
+});
+
+export const receiveProductSearch = results => ({
+    type: RECEIVE_PRODUCT_SEARCH,
+    results
 });
 
 export const createProduct = (product) => dispatch => (
@@ -66,3 +71,8 @@ export const deleteProduct = (id) => dispatch => (
     ))
 );
 
+export const searchProducts = (query_string) => dispatch => (
+    ProductAPIUtil.searchProducts(query_string).then(results => (
+        dispatch(receiveProductSearch(results))
+    ))
+);

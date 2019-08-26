@@ -1,13 +1,14 @@
 import React from 'react';
 import Profile from './profile_dropdown';
 import { Link } from 'react-router-dom';
+import SearchBarContainer from '../search/search_bar_container';
  
 const Greeting = ({ id, logout, openModal }) => {
     
 
 
     const sessionLinks =() => {
-    
+        
         if (id) {
             return (
                 <div className='login-signup'>

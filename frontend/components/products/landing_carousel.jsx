@@ -15,6 +15,7 @@ export default class Fade extends Component {
             <div className='banners-container'>
                 <div className='banner-title'>
                     <h1>If it's handcrafted, vintage, custom, or unique, it's on Artsy.</h1>
+                    <link href="https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap" rel="stylesheet"></link>
                 </div>
                 <Slider {...settings}>
                     <div>

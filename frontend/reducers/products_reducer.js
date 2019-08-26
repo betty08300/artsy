@@ -4,6 +4,7 @@ import {
     RECEIVE_ALL_PRODUCTS,
     RECEIVE_PRODUCT,
     REMOVE_PRODUCT,
+    RECEIVE_PRODUCT_SEARCH
 } from '../actions/product_actions';
 
 const productsReducer = (state={}, action) => {
@@ -19,6 +20,13 @@ const productsReducer = (state={}, action) => {
             const newState = merge({}, state);
             delete newState[Object.values(action.product)[0].id];
             return newState;
+
+        case RECEIVE_PRODUCT_SEARCH:
+            if (!action.results){
+                return {}
+            } else {
+                return action.results;
+            }
         
         default:
             return state;

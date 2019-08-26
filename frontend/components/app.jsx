@@ -17,6 +17,7 @@ import ProductEditContainer from './products/product_edit_container';
 import CreateProductContainer from './products/product_create_container';
 import ShopIndexContainer from './shop/shop_index_container';
 import ShoppingCartIndexContainer from './shopping_cart_items/shopping_cart_item_container';
+import SearchBarContainer from './search/search_bar_container';
 // import SearchContainer from './search/search_container';
 // import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -32,6 +33,7 @@ const App = () => (
                             <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet"></link>
                         </Link>
                     </div>
+                    <SearchBarContainer />
                     <GreetingContainer />
                 </div>
                 
@@ -46,6 +48,7 @@ const App = () => (
                 <Route exact path='/products/:productId/edit' component={ProductEditContainer} />
                 <Route exact path='/shop' component={ShopIndexContainer} />
                 <Route exact path='/cart' component={ShoppingCartIndexContainer}/>
+                <Route exact path='/search' component={SearchBarContainer} />
 
             </Switch>
         </div>
