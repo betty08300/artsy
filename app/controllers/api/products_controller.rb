@@ -43,6 +43,16 @@ class Api::ProductsController < ApplicationController
         end 
     end 
 
+    def search 
+        search_query = params[:query].downcase
+        @products = Product.all.select do |product|
+            title = product.title.downcase
+            seller = product.seller.first_name.downcase
+            (title.include?(search_query)) || seller.include?(search_query)
+        end 
+        render :index 
+    end 
+
 
     private 
     def product_params

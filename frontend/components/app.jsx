@@ -27,13 +27,14 @@ const App = () => (
         <header>
             <div className="navbar-wrapper">
                 <div className='container navbar'>
-                    <div>
+                    <div className="logo-search">
                         <Link to='/' className='artsy-logo'>
                             <h1>Artsy</h1>
                             <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet"></link>
                         </Link>
+                        <SearchBarContainer />
                     </div>
-                    <SearchBarContainer />
+                    
                     <GreetingContainer />
                 </div>
                 
@@ -48,7 +49,7 @@ const App = () => (
                 <Route exact path='/products/:productId/edit' component={ProductEditContainer} />
                 <Route exact path='/shop' component={ShopIndexContainer} />
                 <Route exact path='/cart' component={ShoppingCartIndexContainer}/>
-                <Route exact path='/search' component={SearchBarContainer} />
+                <Route exact path='/search' component={ProductIndexContainer} />
 
             </Switch>
         </div>
