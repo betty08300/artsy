@@ -1,5 +1,9 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+
+
 
 class SearchBar extends React.Component{
     constructor(props){
@@ -28,9 +32,15 @@ class SearchBar extends React.Component{
         return(
             <form className='search' onSubmit={this.handleSubmit}>
                 
-                <input type="text" onChange={this.update('query')} value={this.state.query}
-                placeholder='Search for items or shops'/>
-                <button className='btn' type="submit" value='Search'>Search</button>
+                <div className='search-container'>
+                    <input className='search-input' type="text" onChange={this.update('query')} value={this.state.query}
+                        placeholder='Search for items or shops' />
+
+
+                    <button className='search-button' type="submit">
+                        <FontAwesomeIcon icon={faSearch} />
+                    </button>
+                </div>
             </form>
         )
     }
