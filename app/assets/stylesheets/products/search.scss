@@ -24,6 +24,11 @@
         transition: border 200ms ease-out, background 200ms ease-out;
         border-color: rgba(34, 34, 34, 0.15);
         color: #222222;
+
+        &:focus {
+            background-color: #ffffff;
+           
+        }
         
 
     }
@@ -41,8 +46,15 @@
         transition: all 200ms ease-out;
         border-left: 0; 
         background-color: rgba(239, 239, 239, 1);
+        border-color: rgba(34, 34, 34, 0.15);
         
+        &:hover{
+            background-color: #d7d7d7;
+        }
 
+       
+
+        
 
     }
 
