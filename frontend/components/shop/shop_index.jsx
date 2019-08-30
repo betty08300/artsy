@@ -29,11 +29,14 @@ class ShopIndex extends React.Component {
                     <p>Add as many listings as you can. Ten or more would be a great start. More listings means more chances to be discovered!</p>
                 </div>
                 <div className='products-grid'>
-                    <div className='products-grid-item add-item'>
-                        <Link to={`/products/new`}>
-                            <h1>+</h1>
-                            <p>Add a listing</p>
-                        </Link>
+                    <div className='products-grid-item'>
+                        <div className='add-item'>
+                            <Link to={`/products/new`}>
+                                <h1>+</h1>
+                                <p>Add a listing</p>
+                            </Link>
+                        </div>
+                        
                     </div>
                     
                     {products}
