@@ -39,4 +39,9 @@
 
 .right-footer a{
     margin-left: 15px;
+    color: rgb(102, 128, 212);
+
+    &:hover{
+        color: rgb(83, 104, 172);
+    }
 }
