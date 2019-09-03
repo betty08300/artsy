@@ -11,6 +11,12 @@ class ProductIndex extends React.Component{
        this.props.fetchAllProducts();
    }
 
+   componentDidUpdate(prevProps){
+       if (prevProps.match.path != this.props.match.path && this.props.match.path === '/'){
+           this.props.fetchAllProducts() 
+       }
+   }
+
   
 
     render() {

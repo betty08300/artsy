@@ -33,6 +33,18 @@ class CommentForm extends React.Component{
         }
     }
 
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li className='error' key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
+
     render(){
         
         return(
@@ -45,8 +57,11 @@ class CommentForm extends React.Component{
                         fullSymbol={<FontAwesomeIcon icon={solidStar} />}
                         initialRating={this.state.rating}
                         onChange={this.update('rating')}
-                    />
+                        />
                     <div>
+                        <div className='error-msg'> 
+                            {this.renderErrors()}
+                        </div>
                         <textarea onChange={this.update('body')} value={this.state.body}></textarea>
                     </div>
                     <button>Save</button>

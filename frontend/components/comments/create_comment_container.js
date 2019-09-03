@@ -15,7 +15,7 @@ const msp = (state, ownProps) => {
         comment: default_comment,
         user_id: state.session.id,
         product_id: state.entities.products.id,
-        errors: state.errors.comments,
+        errors: state.errors.comment,
     }
 }
 
