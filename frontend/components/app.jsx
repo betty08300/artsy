@@ -18,8 +18,7 @@ import CreateProductContainer from './products/product_create_container';
 import ShopIndexContainer from './shop/shop_index_container';
 import ShoppingCartIndexContainer from './shopping_cart_items/shopping_cart_item_container';
 import SearchBarContainer from './search/search_bar_container';
-// import SearchContainer from './search/search_container';
-// import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import Footer from './footer';
 
 const App = () => (
     <div>
@@ -52,6 +51,9 @@ const App = () => (
                 <Route exact path='/search' component={ProductIndexContainer} />
 
             </Switch>
+            <footer>
+                <Footer />
+            </footer>
         </div>
         
     </div>

@@ -17,6 +17,7 @@ class SearchBar extends React.Component{
     handleSubmit(e){
         e.preventDefault();
         e.stopPropagation();
+        this.setState({query: ''})
         this.props.searchProducts(this.state.query).then(()=>{
             this.props.history.push('/search')
         })
