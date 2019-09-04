@@ -59,9 +59,9 @@ class CommentForm extends React.Component{
                         onChange={this.update('rating')}
                         />
                     <div>
-                        {/* <div className='error-msg'> 
+                        <div className='error-msg'> 
                             {this.renderErrors()}
-                        </div> */}
+                        </div>
                         <textarea onChange={this.update('body')} value={this.state.body}></textarea>
                     </div>
                     <button>Save</button>
