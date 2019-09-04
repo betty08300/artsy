@@ -63,13 +63,14 @@
 }
 
 .product-container {
+    display: flex; 
     padding-top: 30px;
     max-width: 1272px;
     margin: 0 auto;
 }
 
 .left-col {
-    float: left;
+    // float: left;
     width: percentage(2/3);
     padding-right: 22px;
 
@@ -80,7 +81,7 @@
 }
 
 .right-col {
-    float: right;
+    // float: right;
     width: percentage(1/3);
 
     h1 {

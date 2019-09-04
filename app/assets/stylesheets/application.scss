@@ -60,11 +60,14 @@ table {
 }
 
 .container {
+	display:flex;
+	flex-direction: column;
 	max-width: 1402px;
 
 	&.navbar {
 		display: flex;
 		justify-content: space-between;
+		flex-direction: row;
 	}
 }
 
