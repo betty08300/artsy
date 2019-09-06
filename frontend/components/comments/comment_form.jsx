@@ -46,29 +46,37 @@ class CommentForm extends React.Component{
     }
 
     render(){
-        
-        return(
-          <form onSubmit={this.handleSubmit}>
-                <div className="review-form">
-                    <h1>Write a Review</h1>
-                    
-                    <Rating
-                        emptySymbol={<FontAwesomeIcon icon={regularStar} />}
-                        fullSymbol={<FontAwesomeIcon icon={solidStar} />}
-                        initialRating={this.state.rating}
-                        onChange={this.update('rating')}
-                        />
-                    <div>
-                        <div className='error-msg'> 
-                            {this.renderErrors()}
+
+        if (this.props.id){
+
+            return(
+
+              <form onSubmit={this.handleSubmit}>
+                    <div className="review-form">
+                        <h1>Write a Review</h1>
+                        
+                        <Rating
+                            emptySymbol={<FontAwesomeIcon icon={regularStar} />}
+                            fullSymbol={<FontAwesomeIcon icon={solidStar} />}
+                            initialRating={this.state.rating}
+                            onChange={this.update('rating')}
+                            />
+                        <div>
+                            <div className='error-msg'> 
+                                {this.renderErrors()}
+                            </div>
+                            <textarea onChange={this.update('body')} value={this.state.body}></textarea>
                         </div>
-                        <textarea onChange={this.update('body')} value={this.state.body}></textarea>
+                        <button>Save</button>
                     </div>
-                    <button>Save</button>
-                </div>
-          </form>
-            
-        )
+              </form>
+                
+            )
+
+        } else {
+            return null
+        }
+        
     }
 
 
