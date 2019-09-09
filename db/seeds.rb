@@ -100,6 +100,20 @@ p20.images.attach(io: File.open(img_path + 'football_shirts2.jpg'), filename: 'f
 p21 = Product.create(title: 'Spindle box, Montessori math, Educational wooden toy', description:'It is small and perfect for home use where every inch of space counts. It measures 12 inches long and the spindles are 3 inches long.', price: 31.32 , user_id: betsy.id, who: 'I did', what: 'A finished product', when: 'Made to order')
 p21.images.attach(io: File.open(img_path + 'spindle_box.jpg'), filename: 'spindle_box.jpg')
 
+p22 = Product.create(title: 'Original teepee, kids teepee with nature canvas and leather tassel Door Ties', description:'Original canvas teepee comes with TucsonTeepee signature design, the cross leather lacing on the front and the hand stitched leather tassels door ties. It is one of the most famous design in my store, neutral and stylish.', price: 149.00 , user_id: betty.id, who: 'Another company or person', what: 'A finished product', when: 'Made to order')
+p22.images.attach(io: File.open(img_path + 'original_teepee.jpg'), filename: 'original_teepee.jpg')
+p22.images.attach(io: File.open(img_path + 'original_teepee1.jpg'), filename: 'original_teepee1.jpg')
+p22.images.attach(io: File.open(img_path + 'original_teepee2.jpg'), filename: 'original_teepee2.jpg')
+
+p23 = Product.create(title: 'Macbook Wood Case for Apple Mac Air Pro 11 12 13 15 inch - Walnut Wood Mac book Case - Mac Skin - Mac Sticker - Mac Cover Mac Case for gift', description:'Simple Installation – Quick and easy text/video tutorial available. The two-piece design is removable but not reusable. All ports are 100% accessible, and ventilation is uncompromised.', price: 34.35 , user_id: betsy.id, who: 'I did', what: 'A finished product', when: 'Made to order')
+p23.images.attach(io: File.open(img_path + 'macbook_case.jpg'), filename: 'macbook_case.jpg')
+p23.images.attach(io: File.open(img_path + 'macbook_case1.jpg'), filename: 'macbook_case1.jpg')
+
+p24 = Product.create(title: 'Dinosaur Shirt Pocket Tee TShirt Men Ladies Girl Women Gift Dino Brontosaurus Friend Cute Funny Shirts Science Unisex V-neck Tank Top Trendy', description:'We strive to print on some of the softest shirts around, while keeping our prices low. We believe that even novelty shirts deserve to be comfortable! Our charcoal and Heather (hthr) shirts contain polyester for an even softer feel.', price: 14.99 , user_id: debbie.id, who: 'I did', what: 'A finished product', when: 'Made to order')
+p24.images.attach(io: File.open(img_path + 'pocket_tee.jpg'), filename: 'pocket_tee.jpg')
+
+
+
 
 
 
@@ -127,6 +141,12 @@ c21 = Comment.create(user_id: betty.id, product_id: p16.id, body:'Really like th
 c22 = Comment.create(user_id: betty.id, product_id: p17.id, body:'This is a great font - love it! Especially love how all the letters are in one file that can be ungrouped when I bring it into my Cricut Design Space It is sooo much easier than bringing each letter in one at a time! Genius!', rating:4)
 c23 = Comment.create(user_id: debbie.id, product_id: p19.id, body:'Love this necklace! Wanted something to make our blended family complete! Seller was amazing!', rating:5)
 c24 = Comment.create(user_id: betty.id, product_id: p21.id, body:'Absolutely gorgeous! Quality product and nice workmanship!', rating:4)
+c25 = Comment.create(user_id: bob.id, product_id: p22.id, body:'Kids love it, very sturdy and absolutely adorable!', rating:5)
+c26 = Comment.create(user_id: debbie.id, product_id: p22.id, body:'Love the tent. High quality and good looking. My only wish, is that it came with a way to close the flaps/door. That was the first thing my kids wanted to do, in order to hide inside.', rating:3)
+c27 = Comment.create(user_id: bob.id, product_id: p24.id, body:'This company is AMAZING!!! Their customer service and the quality of their work is truly spectacular. I have worked with them multiple times now and continue to be blown away. I highly recommend them and have been telling all my friends about them.', rating:5)
+
+
+
 
 
 
