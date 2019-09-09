@@ -14,6 +14,7 @@ class CommentForm extends React.Component{
     }
 
     handleSubmit(e){
+        // debugger
         e.preventDefault()
         this.props.createComment(this.state).then(() => {
             this.setState({
@@ -33,6 +34,17 @@ class CommentForm extends React.Component{
         }
     }
 
+    userCommented() {
+        const { comments, user_id } = this.props;
+        for (let key in comments) {
+            const subObj = comments[key];
+            if (subObj.user_id === user_id){
+                return true; 
+            }
+        }
+        return false; 
+    }
+
     renderErrors() {
         return (
             <ul>
@@ -47,40 +59,28 @@ class CommentForm extends React.Component{
 
     render(){
 
-        if (this.props.id){
-
-            return(
-
-              <form onSubmit={this.handleSubmit}>
-                    <div className="review-form">
-                        <h1>Write a Review</h1>
-                        
-                        <Rating
-                            emptySymbol={<FontAwesomeIcon icon={regularStar} />}
-                            fullSymbol={<FontAwesomeIcon icon={solidStar} />}
-                            initialRating={this.state.rating}
-                            onChange={this.update('rating')}
-                            />
-                        <div>
-                            <div className='error-msg'> 
-                                {this.renderErrors()}
-                            </div>
-                            <textarea onChange={this.update('body')} value={this.state.body}></textarea>
+        return this.props.user_id && !this.userCommented() && (
+            <form onSubmit={this.handleSubmit}>
+                <div className="review-form">
+                    <h1>Write a Review</h1>
+                    
+                    <Rating
+                        emptySymbol={<FontAwesomeIcon icon={regularStar} />}
+                        fullSymbol={<FontAwesomeIcon icon={solidStar} />}
+                        initialRating={this.state.rating}
+                        onChange={this.update('rating')}
+                        />
+                    <div>
+                        <div className='error-msg'> 
+                            {this.renderErrors()}
                         </div>
-                        <button>Save</button>
+                        <textarea onChange={this.update('body')} value={this.state.body}></textarea>
                     </div>
-              </form>
-                
-            )
-
-        } else {
-            return null
-        }
-        
-    }
-
-
-
+                    <button>Save</button>
+                </div>
+            </form>
+        )
+    } 
 }
 
 export default withRouter (CommentForm); 

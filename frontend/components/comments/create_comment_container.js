@@ -5,17 +5,19 @@ import CommentForm from './comment_form';
 
 const msp = (state, ownProps) => {
     const default_comment = {
-        id: state.session.id,
+        user_id: state.session.id,
         product_id: ownProps.match.params.productId,
         body: '',
-        rating: 0
+        rating: 0,
+        
     }
 
     return {
         comment: default_comment,
-        id: state.session.id,
-        product_id: state.entities.products.id,
+        comments: state.entities.comments,
         errors: state.errors.comment,
+        product_id: state.entities.products.id,
+        user_id: state.session.id
     }
 }
 
