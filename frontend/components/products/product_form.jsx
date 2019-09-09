@@ -123,7 +123,7 @@ class ProductForm extends React.Component{
                                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBNuizqdv7ZS4DkHbt65u1QNOwZeo4PQ7kDI_UPgXvzzqgcsX6ug" />
                                             <p>Add a photo</p>
                                         </div>
-                                        <input type="file" onChange={this.handleFile} multiple />
+                                        <input type="file" onChange={this.handleFile} multiple accept='image/x-png, image/jpeg, image/jpg'/>
                                     </div>
                                     {photos}
                                 </div>
