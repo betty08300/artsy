@@ -70,6 +70,17 @@ p14 = Product.create(title: 'Custom keychain, leather keychain, custom keychain'
 p14.images.attach(io: File.open(img_path + 'keychain.jpg'), filename: 'keychain.jpg')
 p14.images.attach(io: File.open(img_path + 'keychain2019.jpg'), filename: 'keychain2019.jpg')
 
+p15 = Product.create(title: 'Monogrammed Sandals! Monogram Medallion Sandals! Hot Hot Hot new item!', description:'Available in sizes 6-11 - please see size chart for help with finding size. If you are a 1/2 size (i.e. 8 1/2 I recommend ordering up). The sizing on these is different from last year so there is no need to ALWAYS order up. ', price: 16.80 , user_id: bob.id, who: 'Another company or person', what: 'A finished product', when: 'Made to order')
+p15.images.attach(io: File.open(img_path + 'monogram_sandales.jpg'), filename: 'monogram_sandales.jpg')
+p15.images.attach(io: File.open(img_path + 'sandales.jpg'), filename: 'sandales.jpg')
+p15.images.attach(io: File.open(img_path + 'sandales1.jpg'), filename: 'sandales1.jpg')
+
+p16 = Product.create(title: 'Walnut Rift - Real Wood iPhone Case - iPhone XR, Xs Max, X/Xs, 8/7, 8/7 Plus, 6s, 6s Plus, SE/5s - Made in Canada by Keyway Designs', description:'Keyway cases are made with a hand finished real wood cover, laser cut inlays and a flexible rubber shell. The Walnut Rift features both Walnut wood and leather, with an elegant division down the middle. It is slim, offers full wrap-around protection, covered buttons, and protects from bumps and tumbles. Hand-crafted in Toronto, Canada.', price: 30.64 , user_id: debbie.id, who: 'Another company or person', what: 'A finished product', when: 'Made to order')
+p16.images.attach(io: File.open(img_path + 'iphone_case.jpg'), filename: 'iphone_case.jpg')
+p16.images.attach(io: File.open(img_path + 'iphone_case1.jpg'), filename: 'iphone_case1.jpg')
+p16.images.attach(io: File.open(img_path + 'iphone_case2.jpg'), filename: 'iphone_case2.jpg')
+p16.images.attach(io: File.open(img_path + 'iphone_case3.jpg'), filename: 'iphone_case3.jpg')
+
 
 
 c1 = Comment.create(user_id: betty.id, product_id: p1.id, body:'items arrived very quickly after purchasing and they are going to be a hit! LOVE THEM', rating:5)
@@ -90,6 +101,9 @@ c15 = Comment.create(user_id: betty.id, product_id: p11.id, body:'Absolutely gor
 c16 = Comment.create(user_id: betsy.id, product_id: p13.id, body:'These brushes are amazing! I could never figure out how to get them just right and now I do not have to. Thanks for taking out all of the guess work! You rock!', rating:5)
 c17 = Comment.create(user_id: bob.id, product_id: p13.id, body:'Until now I have never found brushes to suit my needs! Thank you for making drawing hair fun!', rating:4)
 c18 = Comment.create(user_id: debbie.id, product_id: p14.id, body:'These looked so beautiful in person! The color was closer to sage than mint, which is different from what I expected!', rating:3)
+c19 = Comment.create(user_id: debbie.id, product_id: p15.id, body:'Great experience, great quality. Shoes are adorable!', rating:5)
+c20 = Comment.create(user_id: bob.id, product_id: p16.id, body:'I wasn’t thrilled. You may be. Part of the problem is it felt cheap in my hand— the “French” leather is a thin layer of stamped cheap feeling leather, and the wood has an awful plastic-like finish on it that makes it look like, well, plastic. I immediately thought it looked like a piece of veneer you’d find on a cheap piece of furniture.', rating:2)
+c21 = Comment.create(user_id: betty.id, product_id: p16.id, body:'Really like the case. Clean lines. Well constructed. Very efficient service.', rating:4)
 
 
 
