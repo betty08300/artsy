@@ -45,6 +45,12 @@
     padding-left: 15px; 
     width: 100px; 
     border-left: 1px solid #eee;
+
+    p {
+        padding-bottom: 3px;
+    }
+
+    
 }
      
     
@@ -54,6 +60,8 @@
     display: inline-block;
     position: relative; 
     right: 25px; 
+    padding-left: 20px;
+    text-align: center;
     
 }
 
@@ -62,7 +70,7 @@
     width: 30px;
     height: 100%;
     display: inline-block;
-    margin-bottom: 15px; 
+    padding-top: 5px;
 }
 
 

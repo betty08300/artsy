@@ -20,8 +20,10 @@ const Greeting = ({ id, logout, openModal }) => {
                     </div>
                     <Profile/>
                     <div className='cart-container'>
-                        <img className='cart-icon' src='https://image.flaticon.com/icons/svg/1170/1170576.svg'/>
-                        <Link to={`/cart`} className='cart-text'>Cart</Link>
+                        <Link to={`/cart`} className='cart-text'>
+                            <img className='cart-icon' src='https://image.flaticon.com/icons/svg/1170/1170576.svg'/>
+                            <p>Cart</p>     
+                        </Link>
                     </div>
                 </div>
             )
