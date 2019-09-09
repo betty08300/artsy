@@ -81,6 +81,26 @@ p16.images.attach(io: File.open(img_path + 'iphone_case1.jpg'), filename: 'iphon
 p16.images.attach(io: File.open(img_path + 'iphone_case2.jpg'), filename: 'iphone_case2.jpg')
 p16.images.attach(io: File.open(img_path + 'iphone_case3.jpg'), filename: 'iphone_case3.jpg')
 
+p17 = Product.create(title: 'SVG Font INSTANT DOWNLOAD "Hadley Brush" Includes caps, svg, script cut file, cursive font, handlettered font, brush font, script, dxf svg', description:'This is an .SVG/.DXF font bundle, so they will only work in a vector based program. These are not installable. They do not work in Photoshop or Microsoft Word. They behave like cut files, and open with all letters in one document (per font).', price: 5.09 , user_id: betsy.id, who: 'I did', what: 'A finished product', when: 'Made to order')
+p17.images.attach(io: File.open(img_path + 'SVG_font.jpg'), filename: 'SVG_font.jpg')
+p17.images.attach(io: File.open(img_path + 'SVG_font1.jpg'), filename: 'SVG_font1.jpg')
+
+p18 = Product.create(title: 'Women Print Sweater', description:'This MAMA Off Shoulder Sweater feels really soft on the skin and goes below the waist. Perfect Oversized cozy sweater for those chilly days.', price: 35.09 , user_id: betty.id, who: 'I did', what: 'A finished product', when: 'Made to order')
+p18.images.attach(io: File.open(img_path + 'sweater.jpg'), filename: 'sweater.jpg')
+
+p19 = Product.create(title: 'Family Necklace • Personalized Gift • Linked Circle Necklace • Custom Children Name Rings • Eternity Necklace • Mother Gift', description:'♥ Custom Family Eternity Necklace ♥ The most unique jewelry you can find, perfect gift for you and your loved one ♥', price: 29.50 , user_id: bob.id, who: 'A member of my shop', what: 'A finished product', when: 'Made to order')
+p19.images.attach(io: File.open(img_path + 'family_necklace.jpg'), filename: 'family_necklace.jpg')
+p19.images.attach(io: File.open(img_path + 'family_necklace1.jpg'), filename: 'family_necklace1.jpg')
+
+p20 = Product.create(title: 'Men Fall Football Shirt Fall Shirt', description:'This tee is super soft and comfy! It is a tri-blend jersey t-shirt you will not want to take it off.', price: 24.50 , user_id: bob.id, who: 'I did', what: 'A finished product', when: 'Made to order')
+p20.images.attach(io: File.open(img_path + 'football_shirts.jpg'), filename: 'football_shirts.jpg')
+p20.images.attach(io: File.open(img_path + 'football_shirts1.jpg'), filename: 'football_shirts1.jpg')
+p20.images.attach(io: File.open(img_path + 'football_shirts2.jpg'), filename: 'football_shirts2.jpg')
+
+p21 = Product.create(title: 'Spindle box, Montessori math, Educational wooden toy', description:'It is small and perfect for home use where every inch of space counts. It measures 12 inches long and the spindles are 3 inches long.', price: 31.32 , user_id: betsy.id, who: 'I did', what: 'A finished product', when: 'Made to order')
+p21.images.attach(io: File.open(img_path + 'spindle_box.jpg'), filename: 'spindle_box.jpg')
+
+
 
 
 c1 = Comment.create(user_id: betty.id, product_id: p1.id, body:'items arrived very quickly after purchasing and they are going to be a hit! LOVE THEM', rating:5)
@@ -104,6 +124,10 @@ c18 = Comment.create(user_id: debbie.id, product_id: p14.id, body:'These looked 
 c19 = Comment.create(user_id: debbie.id, product_id: p15.id, body:'Great experience, great quality. Shoes are adorable!', rating:5)
 c20 = Comment.create(user_id: bob.id, product_id: p16.id, body:'I wasn’t thrilled. You may be. Part of the problem is it felt cheap in my hand— the “French” leather is a thin layer of stamped cheap feeling leather, and the wood has an awful plastic-like finish on it that makes it look like, well, plastic. I immediately thought it looked like a piece of veneer you’d find on a cheap piece of furniture.', rating:2)
 c21 = Comment.create(user_id: betty.id, product_id: p16.id, body:'Really like the case. Clean lines. Well constructed. Very efficient service.', rating:4)
+c22 = Comment.create(user_id: betty.id, product_id: p17.id, body:'This is a great font - love it! Especially love how all the letters are in one file that can be ungrouped when I bring it into my Cricut Design Space It is sooo much easier than bringing each letter in one at a time! Genius!', rating:4)
+c23 = Comment.create(user_id: debbie.id, product_id: p19.id, body:'Love this necklace! Wanted something to make our blended family complete! Seller was amazing!', rating:5)
+c24 = Comment.create(user_id: betty.id, product_id: p21.id, body:'Absolutely gorgeous! Quality product and nice workmanship!', rating:4)
+
 
 
 
