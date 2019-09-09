@@ -14,6 +14,7 @@ img_path = './app/assets/images/seeds/'
 bob = User.create(first_name: 'Bob', email: 'bob@gmail.com', password: '123456')
 betty = User.create(first_name: 'Betty', email: 'betty@gmail.com', password: '123456')
 betsy = User.create(first_name: 'Betsy', email: 'betsy@gmail.com', password: '123456')
+debbie = User.create(first_name: 'Debbie', email: 'debbie@gmail.com', password: '123456')
 
 p1 = Product.create(title: 'A Baby is Brewing', description: 'Collapsible Foam, 12oz Cans. A Baby is Brewing, Baby Shower Decorations, Baby Announcement, Baby Girl Baby Shower, Baby Shower Can Cooler,Baby Shower Giveaways by My Wedding Store!', price: 24.99, user_id: bob.id, who: 'A member of my shop', what: 'A finished product', when: 'Made to order')
 p1.images.attach(io: File.open(img_path + "baby_shower.jpg"), filename: "baby_shower.jpg")
@@ -60,6 +61,16 @@ p11.images.attach(io: File.open(img_path + 'champagne_glasses2.jpg'), filename: 
 p12 = Product.create(title: 'Personalized Cutting Board', description: 'Personalized Cutting Boards, Custom Engraved Chopping Boards, Custom Engraved Cooking Boards for Weddings, Anniversaries, and Housewarming Gifts made to order.', price: 26.95 , user_id: betsy.id, who: 'I did', what: 'A finished product', when: 'Made to order')
 p12.images.attach(io: File.open(img_path + 'cutting_board.jpg'), filename: 'cutting_board.jpg')
 
+p13 = Product.create(title: 'Summer Whites (Fashion Illustration Print)', description: 'Your BFFs in their summer whites! These girls are also available as individual prints (check them out in the "people" or "new arrivals" section)', price: 14.50 , user_id: debbie.id, who: 'A member of my shop', what: 'A finished product', when: 'Made to order')
+p13.images.attach(io: File.open(img_path + 'fashion_illustration.jpg'), filename: 'fashion_illustration.jpg')
+p13.images.attach(io: File.open(img_path + 'fashion_illustration1.jpg'), filename: 'fashion_illustration1.jpg')
+p13.images.attach(io: File.open(img_path + 'fashion_illustration2.jpg'), filename: 'fashion_illustration2.jpg')
+
+p14 = Product.create(title: 'Custom keychain, leather keychain, custom keychain', description:'This is a great gift! Perfect for teacher gifts, bridesmaids, big and little sorority gifts, gift for teams, and stocking stuffers during holiday time! The best part is they will actually use it daily! Made of leather and customized to your liking! Choose your color! These look great inside our bridesmaid boxes! Keychain measures 5” including ring leather strap is about 3.5” maximum of 15 characters per keychain', price: 6.99 , user_id: betty.id, who: 'A member of my shop', what: 'A finished product', when: 'Made to order')
+p14.images.attach(io: File.open(img_path + 'keychain.jpg'), filename: 'keychain.jpg')
+p14.images.attach(io: File.open(img_path + 'keychain2019.jpg'), filename: 'keychain2019.jpg')
+
+
 
 c1 = Comment.create(user_id: betty.id, product_id: p1.id, body:'items arrived very quickly after purchasing and they are going to be a hit! LOVE THEM', rating:5)
 c2 = Comment.create(user_id: bob.id, product_id: p1.id, body:'Very cute coozies for baby shower! Color was actually lighter than the photo but still worked out great.', rating:4)
@@ -76,6 +87,9 @@ c12 = Comment.create(user_id: betsy.id, product_id: p8.id, body:'Delicate but du
 c13 = Comment.create(user_id: betty.id, product_id: p9.id, body:'These are adorable I got the bags for mother/mother in love, bridesmaids and flower girls to put their gifts in and they are awesome bags. Great quality and so cute! They shipped quickly and were no hassle.', rating:3)
 c14 = Comment.create(user_id: bob.id, product_id: p10.id, body:'Love them!!!! Can not wait to give them to my girls! They were so cute I had to get myself one', rating:5)
 c15 = Comment.create(user_id: betty.id, product_id: p11.id, body:'Absolutely gorgeous! Ordered as a gift but might have to reorder for myself!', rating:3)
+c16 = Comment.create(user_id: betsy.id, product_id: p13.id, body:'These brushes are amazing! I could never figure out how to get them just right and now I do not have to. Thanks for taking out all of the guess work! You rock!', rating:5)
+c17 = Comment.create(user_id: bob.id, product_id: p13.id, body:'Until now I have never found brushes to suit my needs! Thank you for making drawing hair fun!', rating:4)
+c18 = Comment.create(user_id: debbie.id, product_id: p14.id, body:'These looked so beautiful in person! The color was closer to sage than mint, which is different from what I expected!', rating:3)
 
 
 
