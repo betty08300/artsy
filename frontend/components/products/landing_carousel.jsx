@@ -22,11 +22,9 @@ export default class Fade extends Component {
                         <img src="https://i.ytimg.com/vi/K59404x4D5w/maxresdefault.jpg" alt=""/>
                     </div>
                     <div>
-                        {/* <img src='./app/assets/images/banners/banner02.jpeg' /> */}
                         <img src="https://img.mshanken.com/d/wso/bolt/Featured/Ratings/dailywinepicks_1600.jpg" alt=""/>
                     </div>
                     <div>
-                        {/* <img src='./app/assets/images/banners/banner03.jpeg'/> */}
                         <img src="https://elysianjewellery.com/wp-content/uploads/2017/08/banner-handcraft.jpg" alt=""/>
                     </div>
                     <div>
