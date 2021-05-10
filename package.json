@@ -18,7 +18,7 @@
     "bootstrap": "^4.3.1",
     "css-loader": "^3.2.0",
     "font-awesome": "^4.7.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.10",
     "react-dom": "^16.8.6",
