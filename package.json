@@ -32,7 +32,7 @@
     "slick-carousel": "^1.8.1",
     "style-loader": "^1.0.0",
     "webpack": "^4.38.0",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.12"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
